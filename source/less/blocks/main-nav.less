@@ -5,7 +5,13 @@
 
 .main-nav__list {
   padding: 0;
-  margin: 0 auto;
+  margin: 0;
+}
+
+@media (min-width: @tablet) {
+  .main-nav__list {
+    display: flex;
+  }
 }
 
 .main-nav__item {
@@ -14,7 +20,6 @@
   font-style: normal;
   font-size: 20px;
   height: 65px;
-  border-bottom: solid 1px #e6e6e6;
   list-style-type: none;
   text-align: center;
   display: flex;
@@ -24,6 +29,34 @@
   .main-nav__item--link {
     text-decoration: none;
     color: black;
-    width: 280px;
+
+    @media (min-width: @desktop) {
+      color: white;
+    }
+  }
+}
+
+@media (max-width: @tablet-vis) {
+  .main-nav__item {
+    border-bottom: solid 1px #e6e6e6;
+  }
+}
+
+@media (min-width: @tablet) {
+  .main-nav__item--link {
+    margin-left: 23px;
+    font-family: "Oswald", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .main-nav__item--active {
+    border-bottom: 2px solid #68b738;
+
+    @media (min-width: @desktop) {
+      border-color: white;
+    }
   }
 }

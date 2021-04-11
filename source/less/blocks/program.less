@@ -2,13 +2,15 @@
   padding-top: 22px;
 }
 
-.program__wrapper {
-  padding: 0 20px;
-}
-
 .program__list {
   list-style-type: none;
   padding: 0;
+
+  @media (min-width: @desktop) {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10%;
+  }
 }
 
 .program__item {

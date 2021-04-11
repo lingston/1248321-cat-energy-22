@@ -1,7 +1,29 @@
+@media (min-width: @desktop) {
+  .contact {
+    min-height: 400px;
+    width: auto;
+    background-image: url("../../img/Map.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
 .contact__adress-block {
   display: flex;
-  padding: 28px 20px;
   height: 60px;
+  width: 100%;
+  justify-content: space-between;
+  padding-bottom: 20px; // временное решение
+
+  @media (min-width: @desktop) {
+    width: 570px;
+    height: 201px;
+    background-color: white;
+    justify-content: space-around;
+    align-items: center;
+    position: relative; //временное решение
+    top: 95px;
+  }
 }
 
 .contact__title {
@@ -11,6 +33,11 @@
   font-size: 16px;
   line-height: 18px;
   width: 140px;
+
+  @media (min-width: @desktop) {
+    font-size: 20px;
+    line-height: 21px;
+  }
 }
 
 .contact__adress {
@@ -19,5 +46,30 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
+  color: @dark-grey;
   width: 140px;
+
+  @media (min-width: @tablet) {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+    width: 159px;
+  }
+}
+
+@media (min-width: @tablet) {
+  .contact__adress--city {
+    display: block;
+    margin-top: 1em;
+  }
+}
+
+@media (min-width: @desktop) {
+  .contact__map {
+    display: none;
+  }
+}
+
+.contact__map {
+  text-align: center;
 }
