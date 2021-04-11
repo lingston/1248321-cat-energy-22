@@ -3,11 +3,12 @@
   <link rel="stylesheet" href="css/style.css"
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> Кэт энерджи форма</title>
   </head>
   <body class="page__body">
     <header class="page-header">
-      <div class="page-header__wrapper">
+      <div class="page-header__container wrapper">
       <a class="page-header__logo" href="#">
         <img src="img/logo-mobile.svg" width="33.32" height="37.61" alt="Логотип">
       </a>
@@ -22,10 +23,10 @@
         <button class="main-nav__toggle visually-hidden" type="button">
           <span class="visually-hidden"> Открыть меню</span>
         </button>
-        <div class="main-nav__wrapper">
+        <div class="main-nav__wrapper wrapper--responsive">
           <ul class="main-nav__list">
-            <li class="main-nav__item main-nav__item--active">
-              <a class="main-nav__item--link">ГЛАВНАЯ</a>
+            <li class="main-nav__item ">
+              <a class="main-nav__item--link main-nav__item--active">ГЛАВНАЯ</a>
             </li>
             <li class="main-nav__item">
               <a class="main-nav__item--link" href="#">КАТАЛОГ ПРОДУКЦИИ</a>
@@ -41,7 +42,7 @@
       <h1 class="page-form__title">Подбор программы</h1>
       <form class="form">
           <div class="form__name">
-            <div class="form__wrapper">
+            <div class="wrapper">
             <h2 class="form__title--name">Заполните анкету, и мы подберем
               программу питания для вашего кота</h2>
               <div class="form__item">
@@ -60,7 +61,7 @@
           </div>
           <div class="form__program">
             <h2 class="visually-hidden">Выбор программы</h2>
-            <div class="form__wrapper">
+            <div class="wrapper">
             <label class="form__radio-label">
               <input class="form__radio-input" type="radio" name="slim-program" value="slim" checked>
               ПОХУДЕНИЕ
@@ -77,6 +78,7 @@
             </label>
           </div>
           </div>
+          <div class="wrapper">
           <div class="form__wrapper--contact">
             <h2 class ="form__title--contact">Контактные данные <br> (владельца кота)</h2>
             <div class="form__item">
@@ -89,10 +91,10 @@
               <input class= "form__input form__input--phone" type="tel" name="tel" id="tel-field" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}""  placeholder="8 (960) 900-60-90" required>
             </div>
             </div>
-          <div class="form__wrapper">
+            </div>
+          <div class="wrapper">
             <h2 class="form__title--contact">Комментарии</h2>
             <textarea class="form__description" name="behavior" id="behavior-field" rows="5">РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА</textarea>
-          </div>
           <div class="form__wrapper--more">
             <h2 class="form__title--contact"> Дополнительно </h2>
             <div class="form__check-box">
@@ -113,22 +115,31 @@
             <label class="form__label-check" for="vitamins-field">ВИТАМИНЫ</label>
             </div>
             </div>
-          <input class="choice__button" type="submit" value="ОТПРАВИТЬ ЗАЯВКУ">
+          <div class="form__container">
+          <div class="form__button">
+            <input class="button" type="submit" value="ОТПРАВИТЬ ЗАЯВКУ">
+          </div>
           <aside class="form__aside">*-Обязательные поля</aside>
+          </div>
+        </div>
         </div>
       </form>
 
       <section class="contact">
+        <div class="contact__adress-block--form">
+        <div class="wrapper">
         <h2 class="visually-hidden">Контакты</h2>
-        <div class="contact__adress-block contact__adress-block--form">
+        <div class="contact__adress-block">
           <h3 class="contact__title">ПРИГЛАШАЕМ К СОТРУДНИЧЕСТВУ ДИЛЕРОВ</h3>
-          <p class="contact__adress">ул. Большая Конюшенная, д. 19/8 <span class="contact__adress--city">Санкт Петербург</span></p>
+          <p class="contact__adress">ул. Большая<br>Конюшенная, д. 19/8<br><span class="contact__adress--city">Санкт Петербург</span></p>
+        </div>
+        </div>
         </div>
         <div class="contact__map">
           <img src="img/location.jpg" width="320" height="362" alt="временное фото карты">
         </div>
       </section>
-      <footer class="page-footer"> <footer>
+      <footer class="page-footer wrapper">
         <div class="page-footer__wrapper">
           <a class="page-footer__logo" href="#">
             <img src="img/footer-logo 2.svg" width="128" height="24" alt="Название компании">
@@ -153,7 +164,7 @@
           </a>
         </div>
       </div>
-    </footer>
+      </footer>
     </main>
   </body>
 </html>

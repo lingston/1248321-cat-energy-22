@@ -1,13 +1,9 @@
-.form__wrapper {
-  padding: 0 20px;
-}
-
 .form__wrapper--contact {
-  padding: 26px 20px 24px 20px;
+  padding: 26px 0 24px 0;
 }
 
 .form__wrapper--more {
-  padding: 23px 20px 32px 20px;
+  padding: 23px 0;
 }
 
 .form__title--name {
@@ -88,7 +84,7 @@
 }
 
 .form__description {
-  width: 280px;
+  width: 100%;
   height: 150px;
 }
 
@@ -101,13 +97,46 @@
   font-size: 16px;
   line-height: 18px;
   padding-bottom: 34px;
+
+  @media (min-width: @tablet) {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+  }
+
+  @media (min-width: @desktop) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.form__container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+
+  @media (max-width: @tablet) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 
 .form__aside {
   text-align: center;
   padding-top: 21px;
+
+  @media (min-width: @tablet) {
+    text-align: left;
+  }
 }
 
-.contact__adress-block--form {
-  background-color: @grey;
+@media (min-width: @tablet) {
+  .form__button {
+    padding-right: 61px;
+
+    @media (min-width: @desktop) {
+      padding-right: 81px;
+    }
+  }
 }
