@@ -1,16 +1,47 @@
 .page-header {
   margin: 0;
+
+  @media (min-width: @tablet) {
+    padding-top: 24px; //? нужно ли.
+  }
 }
 
-.page-header__wrapper {
-  padding: 0 20px;
+@media (min-width: @tablet) {
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.page-header__container {
   height: 65px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: solid 1px #e6e6e6;
+
+  @media (max-width: @tablet-vis) {
+    border-bottom: solid 1px #e6e6e6;
+  }
+}
+
+@media (min-width: @tablet) {
+  .page-header__container {
+    justify-content: flex-start;
+  }
+}
+
+.page-header__logo {
+  margin-right: 10px;
+  /*outline: 5px solid red;
+  outline-offset: -5px;*/
 }
 
 .page-header__logo--burger {
   width: 33.32px;
+}
+
+@media (min-width: @tablet) {
+  .page-header__logo--burger {
+    display: none;
+  }
 }

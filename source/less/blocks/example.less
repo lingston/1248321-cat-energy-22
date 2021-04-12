@@ -1,10 +1,16 @@
 .example {
   background-color: @grey;
   padding-bottom: 31px;
-}
 
-.example__wrapper {
-  padding: 0 20px;
+  @media (min-width: @desktop) {
+    min-height: 656px;
+    position: relative;
+    background-color: white;
+    background-image: url("../../img/Rectangle\ 1.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 1440px 462px;
+  }
 }
 
 .examlpe__title {
@@ -14,6 +20,30 @@
   font-size: 36px;
   line-height: 40px;
   padding-top: 27px;
+
+  @media (min-width: @tablet) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.example__text {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (min-width: @tablet) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop) {
+    display: block;
+    width: 436px;
+    height: auto;
+  }
 }
 
 .example_description {
@@ -27,6 +57,7 @@
 
 .example__list {
   display: flex;
+  justify-content: space-between;
 }
 
 .example__item {
@@ -71,6 +102,12 @@
   font-size: 14px;
   line-height: 20px;
   text-align: center;
+
+  @media (min-width: @tablet) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
 }
 
 .example__name-toggles {
@@ -81,4 +118,29 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 20px;
+}
+
+@media (min-width: @tablet) {
+  .example__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.example__slider {
+  text-align: center;
+}
+
+@media (min-width: @desktop) {
+  .example__picture-slider {
+    min-height: 536px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .example__wrapper-desktop {
+    display: flex;
+    justify-content: space-between;
+  }
 }

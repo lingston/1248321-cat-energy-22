@@ -3,11 +3,12 @@
   <link rel="stylesheet" href="css/style.css"
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> Кэт энерджи</title>
   </head>
   <body class="page__body">
     <header class="page-header">
-      <div class="page-header__wrapper">
+      <div class="page-header__container wrapper">
       <a class="page-header__logo" href="#">
         <img src="img/logo-mobile.svg" width="33.32" height="37.61" alt="Логотип">
       </a>
@@ -22,10 +23,10 @@
         <button class="main-nav__toggle visually-hidden" type="button">
           <span class="visually-hidden"> Открыть меню</span>
         </button>
-        <div class="main-nav__wrapper">
+        <div class="main-nav__wrapper wrapper--responsive">
           <ul class="main-nav__list">
-            <li class="main-nav__item main-nav__item--active">
-              <a class="main-nav__item--link">ГЛАВНАЯ</a>
+            <li class="main-nav__item ">
+              <a class="main-nav__item--link main-nav__item--active">ГЛАВНАЯ</a>
             </li>
             <li class="main-nav__item">
               <a class="main-nav__item--link" href="#">КАТАЛОГ ПРОДУКЦИИ</a>
@@ -41,18 +42,20 @@
       <h1 class="visually-hidden">Интернет магазин здорового питания для котов</h1>
       <section class="choiсe">
         <div class="choice__color">
-        <div class="choice__wrapper">
+        <div class="wrapper choice__wrapper">
           <header class="choice__header">
           <h2 class="choice__title">Функциональное<br> питание для котов </h2>
           <h3 class="choice__slogan">ЗАНЯЛСЯ СОБОЙ? ЗАЙМИСЬ КОТОМ!</h3>
           </header>
-          <img class="choice__picture" src="img/index-can-mobile 1.png" width="280" height="270" alt="фото продукта">
-          <button class="choice__button">ПОДОБРАТЬ ПРОГРАММУ</button>
+          <div class="choice__picture">
+          <img src="img/index-can-mobile 1.png" width="280" height="270" alt="фото продукта">
+          </div>
+          <button class="button choice__button">ПОДОБРАТЬ ПРОГРАММУ</button>
         </div>
       </section>
       <section class="program">
         <h2 class="visually-hidden">Варианты программ</h2>
-        <div class="program__wrapper">
+        <div class="wrapper">
           <ul class="program__list">
             <li class="program__item program__item--skinny">
               <h3 class="program__title">ПОХУДЕНИЕ</h3>
@@ -69,7 +72,7 @@
         </div>
       </section>
       <section class="how-work">
-        <div class="how-work__wrapper">
+        <div class="wrapper">
           <h2 class="how-work__title">Как это работает</h2>
           <ul class="how-work__list">
             <li class="how-work__item how-work__item--1"> <div class="how-work__icon how-work__icon--substances"> </div> <span class="how-work__description">Функциональное питание содержит только полезные питательные вещества.</span></li>
@@ -80,9 +83,11 @@
         </div>
       </section>
       <section class="example">
-        <div class="example__wrapper">
+        <div class="wrapper example__wrapper-desktop">
+        <div class="example__container--desktop">
           <h2 class="examlpe__title">Живой пример</h2>
-          <p class="example_description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
+          <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
+        <div class= "example__container">
           <dl class="example__list">
             <div class="example__item">
               <dt class="example__number"> 5 КГ </dt>
@@ -93,7 +98,9 @@
               <dd class="example__description">затрачено времени</dd>
             </div>
           </dl>
-          <p class="example__price" >ЗАТРАТЫ НА ПИТАНИЕ: 15000РУБ.</p>
+          <p class="example__price" >ЗАТРАТЫ НА ПИТАНИЕ: <span class="example__price--cost">15000РУБ.</span></p>
+          </div>
+        </div>
           <div class="example__slider">
           <img class="example__picture-slider" src="img/before-mobile 1.png" width="311" height="232" alt="сравнение кота">
             <p class="example__name-toggles">БЫЛО
@@ -104,17 +111,18 @@
         </div>
       </section>
       <section class="contact">
+        <div class="wrapper">
         <h2 class="visually-hidden">Контакты</h2>
         <div class="contact__adress-block">
           <h3 class="contact__title">ПРИГЛАШАЕМ К СОТРУДНИЧЕСТВУ ДИЛЕРОВ</h3>
-          <p class="contact__adress">ул. Большая Конюшенная, д. 19/8 <span class="contact__adress--city">Санкт Петербург</span></p>
+          <p class="contact__adress">ул. Большая<br>Конюшенная, д. 19/8<br><span class="contact__adress--city">Санкт Петербург</span></p>
+        </div>
         </div>
         <div class="contact__map">
           <img src="img/location.jpg" width="320" height="362" alt="временное фото карты">
-
         </div>
       </section>
-      <footer class="page-footer">
+      <footer class="page-footer wrapper">
         <div class="page-footer__wrapper">
           <a class="page-footer__logo" href="#">
             <img src="img/footer-logo 2.svg" width="128" height="24" alt="Название компании">

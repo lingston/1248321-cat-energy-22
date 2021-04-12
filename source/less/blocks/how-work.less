@@ -1,7 +1,3 @@
-.how-work__wrapper {
-  padding: 0 20px;
-}
-
 .how-work__title {
   font-family: "Oswald", sans-serif;
   font-style: normal;
@@ -15,6 +11,19 @@
   padding: 0;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: @tablet) {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: 10%;
+  }
+
+  @media (min-width: @desktop) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .how-work__item {
