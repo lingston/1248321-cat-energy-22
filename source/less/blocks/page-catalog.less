@@ -1,5 +1,5 @@
 .page-catalog {
-  border-bottom: 1px solid #ebebeb;
+  //border-bottom: 1px solid #ebebeb;
 }
 
 .page-catalog__title {
@@ -8,11 +8,42 @@
   font-weight: normal;
   font-size: 36px;
   line-height: 36px;
-  padding: 0 20px;
+}
+
+.card {
+  padding-bottom: 24px;
+
+  @media (min-width: @tablet) {
+    background-color: @grey;
+    height: 511px;
+    min-width: 324px;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop) {
+    min-width: 245px;
+  }
 }
 
 .card__description {
   display: flex;
+
+  @media (min-width: @tablet) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (min-width: @tablet) {
+  .card__br--mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .card__br--tablet {
+    display: none;
+  }
 }
 
 .card__image--wrapper {
@@ -22,11 +53,30 @@
 
 .card__info {
   width: 50%;
+
+  @media (min-width: @tablet) {
+    display: block;
+    min-width: 250px;
+    padding: 0 37.5px;
+    width: 75%;
+    padding-top: 34px;
+  }
+
+  @media (min-width: @desktop) {
+    min-width: 180px;
+    padding: 0 30px;
+  }
 }
 
 .card__image {
   display: block;
   margin: auto;
+
+  @media (min-width: @tablet) {
+    position: relative; //нужно узнать как сделать нормальный background
+    height: auto;
+    min-width: 161px;
+  }
 }
 
 .card__title {
@@ -37,6 +87,12 @@
   line-height: 20px;
   text-transform: uppercase;
   color: #222222;
+
+  @media (min-width: @tablet) {
+    text-align: center;
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .card__table {
@@ -47,22 +103,43 @@
   line-height: 16px;
   width: 100%;
   padding-bottom: 13px;
+
+  @media (min-width: @tablet) {
+    font-size: 16px;
+    line-height: 16px;
+    padding-bottom: 33px;
+  }
 }
 
 .card__table--value {
   text-align: right;
 }
 
-.card {
+.page-catalog__divider {
+  position: absolute;
+  width: 100%;
+  left: 0;
   border-top: 1px solid #ebebeb;
-  padding-bottom: 24px;
-}
 
-.card__wrapper {
-  padding: 0 20px;
+  @media (min-width: @tablet) {
+    display: none;
+  }
 }
 
 .card__button-size {
   font-size: 16px;
   line-height: 20px;
+}
+
+@media (min-width: @tablet) {
+  .product-cards {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    gap: 10%;
+
+    @media (min-width: @desktop) {
+      grid-template-columns: 20.08% 20.08% 20.08% 20.08%;
+      gap: 6.5%;
+    }
+  }
 }

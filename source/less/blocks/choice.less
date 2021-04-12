@@ -3,7 +3,7 @@
   background-repeat: no-repeat;
   min-height: 480px;
   width: 100%;
-  background-position: 50% 0;
+  background-size: 100% 60%;
 
   @media (min-width: @tablet) and (max-width: 1439px) {
     background-image: none;
@@ -15,11 +15,14 @@
   }
 }
 
-//изменить блок
-@media (max-width: 400px) {
+@media (max-width: @tablet) {
   .choice__color {
-    background-color: rgba(104, 183, 56, 0.85);
-    height: 302px;
+    background-image: url("../../img/Rectangle\ 18.jpg");
+    background-repeat: no-repeat;
+    min-height: 480px;
+    width: 100%;
+    background-size: 100% 60%;
+    opacity: 0.85;
   }
 }
 

@@ -3,11 +3,12 @@
   <link rel="stylesheet" href="css/style.css"
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> Кэт энерджи каталог</title>
   </head>
   <body class="page__body">
     <header class="page-header">
-      <div class="page-header__wrapper">
+      <div class="page-header__container wrapper">
       <a class="page-header__logo" href="#">
         <img src="img/logo-mobile.svg" width="33.32" height="37.61" alt="Логотип">
       </a>
@@ -22,10 +23,10 @@
         <button class="main-nav__toggle visually-hidden" type="button">
           <span class="visually-hidden"> Открыть меню</span>
         </button>
-        <div class="main-nav__wrapper">
+        <div class="main-nav__wrapper wrapper--responsive">
           <ul class="main-nav__list">
-            <li class="main-nav__item main-nav__item--active">
-              <a class="main-nav__item--link">ГЛАВНАЯ</a>
+            <li class="main-nav__item ">
+              <a class="main-nav__item--link main-nav__item--active">ГЛАВНАЯ</a>
             </li>
             <li class="main-nav__item">
               <a class="main-nav__item--link" href="#">КАТАЛОГ ПРОДУКЦИИ</a>
@@ -38,18 +39,19 @@
       </nav>
     </header>
     <main class="page-catalog">
+      <div class="wrapper">
       <h1 class="page-catalog__title">Каталог продукции</h1>
       <section class="product-cards">
+        <hr class="page-catalog__divider">
         <div class="card">
-          <div class="card__wrapper">
           <div class="card__description">
           <div class="card__image--wrapper">
-          <img class="card__image" src="img/catalog-1-desktop 1.png" width="68" height="86" alt="Фото продукции">
+          <img class="card__image" src="img/catalog-1-desktop 1.svg" width="68" height="86" alt="Фото продукции">
           </div>
           <div class="card__info">
-            <h3 class="card__title">CAT ENERGY <br> PRO 500 Г</h3>
+            <h3 class="card__title">CAT ENERGY <br class="card__br--mobile"> PRO <br class="card__br--tablet"> 500 Г</h3>
             <table class="card__table">
-              <tr>
+              <tr class="card__border-bottom">
                 <td class="card__table--parameter">Масса</td>
                 <td class="card__table--value">500 г</td>
               </tr>
@@ -64,17 +66,16 @@
             </table>
           </div>
           </div>
-          <input class="choice__button card__button-size" type="submit" value="ЗАКАЗАТЬ">
-          </div>
+          <input class="button card__button-size" type="submit" value="ЗАКАЗАТЬ">
         </div>
+        <hr class="page-catalog__divider">
         <div class="card">
-          <div class="card__wrapper">
           <div class="card__description">
           <div class="card__image--wrapper">
-          <img class="card__image" src="img/catalog-2-desktop 1.jpg" width="84" height="100.8" alt="Фото продукции">
+          <img class="card__image" src="img/catalog-2-desktop 1.svg" width="84" height="100.8" alt="Фото продукции">
           </div>
           <div class="card__info">
-            <h3 class="card__title">CAT ENERGY <br> PRO 1000 Г</h3>
+            <h3 class="card__title">CAT ENERGY <br class="card__br--mobile"> PRO <br class="card__br--tablet"> 1000 Г</h3>
             <table class="card__table">
               <tr>
                 <td class="card__table--parameter">Масса</td>
@@ -91,17 +92,16 @@
             </table>
           </div>
           </div>
-          <input class="choice__button card__button-size" type="submit" value="ЗАКАЗАТЬ">
-          </div>
+          <input class="button card__button-size" type="submit" value="ЗАКАЗАТЬ">
         </div>
+        <hr class="page-catalog__divider">
         <div class="card">
-          <div class="card__wrapper">
           <div class="card__description">
           <div class="card__image--wrapper">
-          <img class="card__image" src="img/catalog-1-desktop 1.png" width="68" height="86" alt="Фото продукции">
+          <img class="card__image" src="img/catalog-3-desktop.jpg" width="68" height="86" alt="Фото продукции">
           </div>
           <div class="card__info">
-            <h3 class="card__title">CAT ENERGY <br> PRO 500 Г</h3>
+            <h3 class="card__title">CAT ENERGY <br class="card__br--mobile"> PRO <br class="card__br--tablet"> 500 Г</h3>
             <table class="card__table">
               <tr>
                 <td class="card__table--parameter">Масса</td>
@@ -118,20 +118,21 @@
             </table>
           </div>
           </div>
-          <input class="choice__button card__button-size" type="submit" value="ЗАКАЗАТЬ">
-          </div>
+          <input class="button card__button-size" type="submit" value="ЗАКАЗАТЬ">
         </div>
+        <hr class="page-catalog__divider">
         <div class="more-product">
           <div class="more-product__wrapper">
           <p class="more-product__symbol">+</p>
             <h4 class="more-product__title">ПОКАЗАТЬ ЕЩЁ 100500 ТОВАРОВ</h4>
             <p class="more-product__description">На самом деле вкусов гораздо больше</p>
-            <input class="choice__button card__button--show" type="button" value="ПОКАЗАТЬ ВСЕ">
+            <input class="button card__button--show" type="button" value="ПОКАЗАТЬ ВСЕ">
           </div>
           </div>
+          <hr class="page-catalog__divider">
       </section>
+      <div class="additional-product__desktop-grid">
       <section class="additional-product">
-        <div class="additional-product__wrapper">
         <h2 class="additional-product__title">Дополнительные товары</h2>
           <div class="additional-card additional-card__line">
             <p class="additional-card__title">САХАРОЗАМЕНИТЕЛЬ</p>
@@ -139,7 +140,7 @@
             <p>1 упаковка (100 г)</p>
             <p>200 Р.</p>
             </div>
-            <input class="choice__button additional-card__button-size" type="submit" value="ЗАКАЗАТЬ">
+            <input class="button additional-card__button-size" type="submit" value="ЗАКАЗАТЬ">
           </div>
           <div class="additional-card additional-card__line">
             <p class="additional-card__title">ПИТЬЕВАЯ ВОДА</p>
@@ -147,7 +148,7 @@
             <p>5 литров</p>
             <p>50 Р.</p>
             </div>
-            <input class="choice__button additional-card__button-size" type="submit" value="ЗАКАЗАТЬ">
+            <input class="button additional-card__button-size" type="submit" value="ЗАКАЗАТЬ">
           </div>
           <div class="additional-card additional-card__line">
             <p class="additional-card__title">ПИТЬЕВАЯ ВОДА</p>
@@ -155,9 +156,8 @@
             <p>5 литров</p>
             <p>50 Р.</p>
             </div>
-            <input class="choice__button additional-card__button-size" type="submit" value="ЗАКАЗАТЬ">
+            <input class="button additional-card__button-size" type="submit" value="ЗАКАЗАТЬ">
           </div>
-        </div>
       </section>
       <section class="gift">
         <div class="gift__wrapper--flex">
@@ -165,41 +165,47 @@
         <p class="gift__description"> Закажите все <br> и получите чехол для <br> кота в подарок</p>
         </div>
       </section>
-      <section class="contact">
-        <h2 class="visually-hidden">Контакты</h2>
-        <div class="contact__adress-block contact__adress-block--form">
-          <h3 class="contact__title">ПРИГЛАШАЕМ К СОТРУДНИЧЕСТВУ ДИЛЕРОВ</h3>
-          <p class="contact__adress">ул. Большая Конюшенная, д. 19/8 <span class="contact__adress--city">Санкт Петербург</span></p>
-        </div>
-        <div class="contact__map">
-          <img src="img/location.jpg" width="320" height="362" alt="временное фото карты">
-        </div>
-      </section>
-      <footer class="page-footer"> <footer>
-        <div class="page-footer__wrapper">
-          <a class="page-footer__logo" href="#">
-            <img src="img/footer-logo 2.svg" width="128" height="24" alt="Название компании">
-          </a>
-        <div class="page-footer_social social">
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="htpps://vk.com">Вконтакте</a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--instagram" href="https://www.instagram.com/">Инстаграм</a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--facebook" href="https://www.facebook.com/">Фейсбук</a>
-            </li>
-          </ul>
-        </div>
-        <div class="page-footer__copyright copyright">
-          <a class="copyright__link--text" href="https://htmlacademy.ru/">HTML Academy</a>
-          <a class="copyright__link--logo" href="https://htmlacademy.ru/">
-          <img src="img/Лого_html 1.svg" width="27" height="34" alt="лого Html Academy">
-          </a>
-        </div>
+    </div>
+    </div>
+    <section class="contact">
+      <div class="contact__adress-block--form">
+      <div class="wrapper">
+      <h2 class="visually-hidden">Контакты</h2>
+      <div class="contact__adress-block">
+        <h3 class="contact__title">ПРИГЛАШАЕМ К СОТРУДНИЧЕСТВУ ДИЛЕРОВ</h3>
+        <p class="contact__adress">ул. Большая<br>Конюшенная, д. 19/8<br><span class="contact__adress--city">Санкт Петербург</span></p>
       </div>
+      </div>
+      </div>
+      <div class="contact__map">
+        <img src="img/location.jpg" width="320" height="362" alt="временное фото карты">
+      </div>
+    </section>
+    <footer class="page-footer wrapper">
+      <div class="page-footer__wrapper">
+        <a class="page-footer__logo" href="#">
+          <img src="img/footer-logo 2.svg" width="128" height="24" alt="Название компании">
+        </a>
+      <div class="page-footer_social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--vkontakte" href="htpps://vk.com">Вконтакте</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="https://www.instagram.com/">Инстаграм</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/">Фейсбук</a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <a class="copyright__link--text" href="https://htmlacademy.ru/">HTML Academy</a>
+        <a class="copyright__link--logo" href="https://htmlacademy.ru/">
+        <img src="img/Лого_html 1.svg" width="27" height="34" alt="лого Html Academy">
+        </a>
+      </div>
+    </div>
     </footer>
     </main>
   </body>
