@@ -2,7 +2,9 @@
   background-image: url("../../img/gift-photo-mobile\ 1.jpg");
   min-height: 289px;
   background-repeat: no-repeat;
-  margin: 39px 20px 35px 20px;
+  background-size: cover;
+  background-position: center;
+  margin: 39px 0 35px 0;
 }
 
 .gift__wrapper--flex {
@@ -12,6 +14,14 @@
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
+
+  @media (min-width: @tablet) {
+    flex-direction: row;
+  }
+
+  @media (min-width: @desktop) {
+    flex-direction: column;
+  }
 }
 
 .gift__description {
@@ -22,4 +32,8 @@
   font-size: 16px;
   line-height: 20px;
   color: white;
+
+  @media (min-width: @tablet) {
+    text-align: left;
+  }
 }
