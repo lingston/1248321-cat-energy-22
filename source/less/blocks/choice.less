@@ -2,36 +2,34 @@
   background-image: url("../../img/index-background-desktop\ 2.jpg");
   background-repeat: no-repeat;
   min-height: 480px;
-  width: 100%;
+  max-width: 100%;
   background-size: 100% 60%;
+  margin-top: -30px;
 
   @media (min-width: @tablet) and (max-width: 1439px) {
     background-image: none;
   }
 
   @media (min-width: @desktop) {
-    background-position: 120% 100%;
-    background-size: 720px 694px;
+    background-image: url("../../img/index-background-desktop\ 1.jpg");
+    background-position: 100% 100%;
+    background-size: 50%;
+    margin-top: -100px;
   }
 }
 
-@media (max-width: @tablet) {
-  .choice__color {
-    background-image: url("../../img/Rectangle\ 18.jpg");
-    background-repeat: no-repeat;
-    min-height: 480px;
-    width: 100%;
-    background-size: 100% 60%;
-    opacity: 0.85;
+.choice__color {
+  background: linear-gradient(to bottom, rgba(104, 183, 56, 0.85) 60%, white 40%);
+
+  @media (min-width: @tablet) {
+    background-image: none;
+  }
+
+  @media (min-width: @desktop) {
+    background: linear-gradient(to left, rgba(104, 183, 56, 0.85) 50%, white 50%);
+    height: 690px;
   }
 }
-
-/*.choice__container {
-  padding: 0 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}*/
 
 .choice__wrapper {
   @media (min-width: @tablet) {
@@ -57,6 +55,12 @@
     line-height: 60px;
     color: black;
   }
+
+  @media (min-width: @desktop) {
+    position: relative;
+    top: 150px;
+    left: 100px;
+  }
 }
 
 .choice__slogan {
@@ -74,6 +78,12 @@
     line-height: 20px;
     color: black;
   }
+
+  @media (min-width: @desktop) {
+    position: relative;
+    top: 150px;
+    left: 100px;
+  }
 }
 
 .choice__button {
@@ -82,22 +92,45 @@
     height: 54px;
     font-size: 20px;
     line-height: 20px;
+    position: absolute;
+    top: 370px;
+  }
+
+  @media (min-width: @desktop) {
+    top: 500px;
+    left: 200px;
   }
 }
 
 .choice__picture {
   text-align: center;
 
-  @media (min-width: @tablet) and (max-width: 1439px) {
+  @media (min-width: @tablet) {
     order: 2;
-    position: absolute;
-    top: 341px;
-    width: 709px;
-    height: 609px;
-  } //размеры картики нужно переделать, добавить ещё один див
+    min-height: 609px;
+    width: 100%;
+    background-image: url("../../img/index-can-tablet\ 1.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    margin-top: -5px;
+
+    img {
+      display: none;
+    }
+  }
 
   @media (min-width: @desktop) {
-    vertical-align: center;
-    order: 2;
+    background-image: none;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 160px;
+    left: 150px;
+
+    img {
+      display: block;
+      min-width: 552px;
+      height: 499px;
+    }
   }
 }
