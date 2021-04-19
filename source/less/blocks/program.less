@@ -1,5 +1,13 @@
 .program {
   padding-top: 22px;
+
+  @media (min-width: @tablet) {
+    padding-top: 0;
+  }
+
+  @media (min-width: @desktop) {
+    padding-top: 82px;
+  }
 }
 
 .program__list {
@@ -8,15 +16,24 @@
 
   @media (min-width: @desktop) {
     display: grid;
-    grid-template-columns: auto auto;
-    gap: 10%;
+    grid-template-columns: 47% 47%;
+    gap: 6%;
   }
 }
 
 .program__item {
   background-color: @grey;
-  padding: 21px 20px 18px 21px;
+  padding: 0 33px 18px 20px;
   margin-top: 20px;
+
+  @media (min-width: @tablet) {
+    margin-bottom: 30px;
+    padding: 41px 279px 53px 52px;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 41px 51px 55px 52px;
+  }
 }
 
 .program__title {
@@ -25,6 +42,51 @@
   font-weight: 400;
   font-size: 24px;
   line-height: 37px;
+  padding-left: 71px;
+  padding-top: 30px;
+
+  @media (min-width: @tablet) {
+    padding-top: 0;
+    padding-left: 0;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: @desktop) {
+    padding-left: 163px;
+  }
+}
+
+.program__item--skinny {
+  background-image: url("../../img/cat_back.svg");
+  background-repeat: no-repeat;
+  background-position: 22px 21px;
+
+  @media (min-width: @tablet) {
+    background-position: center right 62px;
+    background-size: 200px 211px;
+  }
+
+  @media (min-width: @desktop) {
+    background-position: 52px 41px;
+    background-size: 100px 106px;
+  }
+}
+
+.program__item--fat {
+  background-image: url("../../img/cat_back-2.svg");
+  background-repeat: no-repeat;
+  background-position: 13px 21px;
+
+  @media (min-width: @tablet) {
+    background-position: center right 28px;
+    background-size: 268px 200px;
+  }
+
+  @media (min-width: @desktop) {
+    background-position: 33px 47px;
+    background-size: 134px 100px;
+  }
 }
 
 .program__description {
@@ -34,4 +96,47 @@
   font-size: 14px;
   line-height: 18px;
   color: @dark-grey;
+  padding-bottom: 6px;
+
+  @media (min-width: @tablet) {
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 48px;
+  }
+
+  @media (min-width: @desktop) {
+    padding-top: 47px;
+    padding-bottom: 7px;
+  }
+}
+
+.program__line {
+  border: 1px solid #d9d9d9;
+  margin-bottom: 15px;
+
+  @media (min-width: @tablet) {
+    display: none;
+  }
+}
+
+.program__button {
+  text-decoration: none;
+  color: black;
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop) {
+    span {
+      padding-left: 28px;
+    }
+  }
 }

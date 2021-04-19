@@ -6,11 +6,13 @@
 .main-nav__list {
   padding: 0;
   margin: 0;
-}
 
-@media (min-width: @tablet) {
-  .main-nav__list {
+  @media (min-width: @tablet) {
     display: flex;
+  }
+
+  @media (min-width: @desktop) {
+    z-index: 2;
   }
 }
 
@@ -26,9 +28,33 @@
   justify-content: center;
   align-items: center;
 
+  @media (min-width: @tablet) {
+    &--active {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+        left: 0;
+        height: 2px;
+        background: @green;
+
+        @media (min-width: @desktop) {
+          background: white;
+        }
+      }
+    }
+  }
+
   .main-nav__item--link {
     text-decoration: none;
     color: black;
+
+    &:hover {
+      opacity: 0.6;
+    }
 
     @media (min-width: @desktop) {
       color: white;
@@ -38,7 +64,7 @@
 
 @media (max-width: @tablet-vis) {
   .main-nav__item {
-    border-bottom: solid 1px #e6e6e6;
+    border-top: solid 1px #e6e6e6;
   }
 }
 
@@ -52,11 +78,87 @@
     line-height: 24px;
   }
 
-  .main-nav__item--active {
+  /*.main-nav__item--active {
     border-bottom: 2px solid #68b738;
 
     @media (min-width: @desktop) {
       border-color: white;
     }
+  }*/
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 35px;
+  right: 20px;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 5px;
+  width: 24px;
+  height: 2px;
+  background-color: black;
+  box-shadow: 0 8px 0 0 black, 0 16px 0 0 black;
+}
+
+.main-nav--closed .main-nav__toggle:active::before {
+  background-color: fade(black, 30%);
+  box-shadow:
+    0 8px 0 0 fade(black, 30%),
+    0 16px 0 0 fade(black, 30%);
+}
+
+.main-nav--opened .main-nav__toggle::before,
+.main-nav--opened .main-nav__toggle::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 0;
+  width: 24px;
+  height: 2px;
+  background-color: black;
+}
+
+.main-nav--opened .main-nav__toggle::before {
+  transform: rotate(45deg);
+  box-shadow: none;
+}
+
+.main-nav--opened .main-nav__toggle::after {
+  transform: rotate(-45deg);
+  box-shadow: none;
+}
+
+.main-nav--opened .main-nav__toggle {
+  &:active::before,
+  &:active::after {
+    background-color: fade(black, 30%);
+  }
+}
+
+@media (max-width: @mobile-only) {
+  .main-nav--closed .main-nav__item {
+    display: none;
+  }
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav--nojs .main-nav__item {
+  display: flex;
+}
+
+@media (min-width: @tablet) {
+  .main-nav__toggle {
+    display: none;
   }
 }

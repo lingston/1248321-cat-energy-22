@@ -1,19 +1,14 @@
-@media (min-width: @desktop) {
-  .contact {
-    min-height: 400px;
-    width: auto;
-    background-image: url("../../img/Map.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-}
-
 .contact__adress-block {
   display: flex;
   height: 60px;
   width: 100%;
   justify-content: space-between;
-  padding-bottom: 20px; // временное решение
+  padding-top: 12px;
+  margin-bottom: 34px;
+
+  @media (min-width: @tablet) {
+    padding: 60px 0;
+  }
 
   @media (min-width: @desktop) {
     width: 570px;
@@ -23,6 +18,7 @@
     align-items: center;
     position: relative; //временное решение
     top: 95px;
+    padding: 0;
   }
 }
 
@@ -33,6 +29,11 @@
   font-size: 16px;
   line-height: 18px;
   width: 140px;
+
+  @media (min-width: @tablet) {
+    font-size: 20px;
+    line-height: 21px;
+  }
 
   @media (min-width: @desktop) {
     font-size: 20px;
@@ -52,6 +53,11 @@
   @media (min-width: @tablet) {
     font-size: 16px;
     line-height: 20px;
+  }
+
+  @media (min-width: @tablet) {
+    font-size: 16px;
+    line-height: 20px;
     text-align: right;
     width: 159px;
   }
@@ -64,14 +70,18 @@
   }
 }
 
-@media (min-width: @desktop) {
-  .contact__map {
-    display: none;
-  }
-}
-
 .contact__map {
-  text-align: center;
+  margin-bottom: -4px;
+  padding: 0;
+  height: 362px;
+
+  @media (min-width: @tablet) {
+    height: 400px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-top: -235px;
+  }
 }
 
 @media (max-width: @desktop) {

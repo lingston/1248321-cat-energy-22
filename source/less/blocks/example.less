@@ -2,7 +2,19 @@
   background-color: @grey;
   padding-bottom: 31px;
 
+  @media (min-width: @tablet) and (max-width: 1439px) {
+    background: linear-gradient(to bottom, white 60%, @grey 40%);
+    border-top: 1px solid #e6e6e6;
+    margin-top: 102px;
+  }
+
   @media (min-width: @desktop) {
+    border-top: none;
+    margin-top: 26px;
+    padding-bottom: 75px;
+    background: linear-gradient(to bottom, white 25%, @grey 25%, @grey 75%);
+  }
+  /*@media (min-width: @desktop) {
     min-height: 656px;
     position: relative;
     background-color: white;
@@ -10,7 +22,7 @@
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: 1440px 462px;
-  }
+  }*/
 }
 
 .examlpe__title {
@@ -24,6 +36,8 @@
   @media (min-width: @tablet) {
     font-size: 60px;
     line-height: 60px;
+    padding-top: 43px;
+    margin: 0;
   }
 }
 
@@ -37,23 +51,27 @@
   @media (min-width: @tablet) {
     font-size: 16px;
     line-height: 24px;
+    margin: 0;
+    padding-top: 63px;
   }
 
   @media (min-width: @desktop) {
     display: block;
     width: 436px;
     height: auto;
+    padding-top: 146px;
+    padding-bottom: 69px;
   }
 }
 
-.example_description {
+/*.example__description {
   font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
   color: @dark-grey;
-}
+}*/
 
 .example__list {
   display: flex;
@@ -67,14 +85,23 @@
 
 .example__number {
   border: solid 1px #cdcdcd;
+  border-radius: 5px;
   width: 124px;
-  height: 56px;
+  height: 41px;
   text-align: center;
   font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
   line-height: 24px;
+  padding-top: 15px;
+
+  @media (min-width: @tablet) {
+    width: 162px;
+    height: 57px;
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .example__description {
@@ -89,6 +116,30 @@
   font-weight: normal;
   font-size: 12px;
   line-height: 12px;
+  color: @dark-grey;
+
+  @media (min-width: @tablet) {
+    br {
+      display: none;
+    }
+
+    font-size: 14px;
+    line-height: 14px;
+    width: 97px;
+    padding: 0 9px;
+    background-color: white;
+  }
+
+  @media (min-width: @desktop) {
+    background-color: @grey;
+  }
+}
+
+@media (min-width: @tablet) {
+  .example__description--time {
+    width: 127px;
+    right: 30px;
+  }
 }
 
 .example__number:first-child {
@@ -107,6 +158,24 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    font-size: 20px;
+  }
+
+  @media (min-width: @desktop) {
+    display: block;
+
+    .example__price--cost {
+      padding-left: 63px;
+    }
+  }
+}
+
+@media (min-width: @desktop) {
+  .example__container--desktop {
+    display: flex;
+    justify-content: space-between;
+    height: 157px;
+    align-items: flex-end;
   }
 }
 
@@ -118,18 +187,42 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 20px;
+  //для работы слайдера тест возможно можно без этого
+  display: flex;
+  justify-content: center;
+}
+
+.example__name-toggles--dotted {
+  @media (min-width: @tablet) {
+    padding-bottom: 3px;
+    border-bottom: 1px dotted #dccdcd;
+  }
 }
 
 @media (min-width: @tablet) {
   .example__container {
+    padding-top: 38px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (min-width: @desktop) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 }
 
 .example__slider {
   text-align: center;
+
+  @media (min-width: @tablet) {
+    padding-top: 40px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 690px;
+  }
 }
 
 @media (min-width: @desktop) {
@@ -138,9 +231,54 @@
   }
 }
 
-@media (min-width: @desktop) {
-  .example__wrapper-desktop {
-    display: flex;
-    justify-content: space-between;
+//слайдер было-стало, нужно доработать или переделать. не пропускает в таком синтаксисе.
+/*
+.example_slider-toggle--mobile {
+  border: 1px solid #cdcdcd;
+  width: 84px;
+  height: 14px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin: auto 12px;
+
+  @media (min-width: @tablet) {
+    width: 428px;
+    background-color: @grey;
+    border: none;
   }
 }
+
+.example_slider-toggle input {
+  -webkit-appearance: none;
+  border: 1px solid white;
+  border-radius: 6px;
+  width: 72px;
+  height: 8px;
+  outline: none;
+  background: -webkit-linear-gradient(left, #68b738 0%, #68b738 30%, white 30%, white 100%);
+
+  @media (min-width: @tablet) {
+    border: 1px solid #dcdcdc;
+    width: 428px;
+    height: 6px;
+    background: #dcdcdc;
+  }
+}
+
+.example_slider-toggle::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  cursor: pointer;
+
+  @media (min-width: @tablet) {
+    width: 34px;
+    height: 34px;
+    background-color: white;
+    border-radius: 100%;
+    background-image: url("../../img/slider\ control.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+} */
