@@ -1,14 +1,82 @@
+.form {
+  @media (min-width: @tablet) {
+    padding-bottom: 72px;
+  }
+}
+
+.form__desktop {
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: @desktop) {
+    display: grid;
+    grid-template-columns: 55% 40%;
+    gap: 5%;
+  }
+}
+
+.wrapper__form {
+  padding: 0 20px;
+
+  @media (min-width: @tablet) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 0;
+  }
+}
+
+.page-form__title {
+  margin: 0;
+  padding: 27px 20px 0 20px;
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 36px;
+
+  @media (min-width: @tablet) {
+    padding: 65px 0 54px 69px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 73px 0 56px 110px;
+  }
+}
+
+.form__wrapper {
+  @media (min-width: @tablet) {
+    padding: 0 67px 0 71px;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 0 110px;
+  }
+}
+
 .form__wrapper--contact {
   padding: 26px 0 24px 0;
+
+  @media (min-width: @tablet) {
+    padding-top: 71px;
+    padding-bottom: 65px;
+  }
 }
 
 .form__wrapper--more {
   padding: 23px 0;
+
+  @media (min-width: @tablet) {
+    padding: 0;
+  }
 }
 
 .form__title--name {
   margin: 0;
-  padding: 37px 0 39px 0;
+  padding: 37px 20px 39px 20px;
   font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -17,6 +85,20 @@
   text-transform: uppercase;
   width: 226px;
   height: 36px;
+
+  @media (min-width: @tablet) {
+    font-size: 20px;
+    line-height: 30px;
+    width: 323px;
+    height: 60px;
+    padding: 0;
+    padding-bottom: 66px;
+    padding-left: 69px;
+  }
+
+  @media (min-width: @desktop) {
+    padding-left: 110px;
+  }
 }
 
 .form__title--contact {
@@ -27,6 +109,23 @@
   line-height: 26px;
   margin: 0;
   padding-bottom: 35px;
+
+  @media (min-width: @tablet) {
+    font-size: 36px;
+    line-height: 36px;
+    padding: 0;
+    background-color: white;
+    width: max-content;
+    position: relative;
+    left: -40px;
+    padding-left: 40px;
+    padding-right: 42px;
+    padding-bottom: 60px;
+
+    & br {
+      display: none;
+    }
+  }
 }
 
 .form__label {
@@ -43,9 +142,30 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
-  color: @dark-grey;
+  color: #444444;
   border: 1px solid #e7e7e7;
   box-sizing: border-box;
+  padding-left: 15px;
+
+  &:hover {
+    border: 1px solid #cdcdcd;
+  }
+  // не работает, не понятно почему
+  &:focus {
+    border: 2px solid #444444;
+  }
+}
+
+.form__input--mail {
+  background-image: url("../img/icon_email.svg");
+  background-repeat: no-repeat;
+  background-position: right 5% center;
+}
+
+.form__input--phone {
+  background-image: url("../../img/phone\ 1.svg");
+  background-repeat: no-repeat;
+  background-position: right 5% center;
 }
 
 .form__item {
@@ -56,6 +176,11 @@
   font-size: 16px;
   line-height: 18px;
   color: @dark-grey;
+
+  @media (min-width: @tablet) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .form__line {
@@ -65,12 +190,37 @@
 
 .form__name {
   padding-bottom: 24px;
+
+  @media (min-width: @tablet) {
+    padding-bottom: 72px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .form__program {
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
-  padding: 24px 0;
+  padding: 24px 0 11px 0;
+
+  @media (min-width: @tablet) {
+    border: 1px solid #e7e7e7;
+    padding-top: 25px;
+    padding-bottom: 12px;
+    margin-left: 71px;
+    margin-right: 67px;
+  }
+
+  @media (min-width: @desktop) {
+    margin: 0;
+    margin-right: 110px;
+    margin-left: -110px;
+    padding: 25px 0 12px 28px;
+  }
 }
 
 .form__radio-label {
@@ -80,12 +230,121 @@
   font-size: 16px;
   line-height: 18px;
   color: @dark-grey;
+  display: flex;
+  align-items: center;
   padding-bottom: 13px;
+
+  @media (min-width: @tablet) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.form__radio-input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.form__radio-input + label::before {
+  content: "";
+  display: block;
+  border: 1px solid #cdcdcd;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+}
+
+.form__radio-input:hover + label::before {
+  border: 1px solid #bababa;
+}
+
+.form__radio-input:checked + label::before {
+  background-image: url("../../img/radiobutton\ active.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.form__line--contact {
+  position: relative;
+  bottom: 80px;
+  left: 201px;
+  border-top: 2px solid #68b738;
+  width: 100%;
+  overflow: hidden;
+
+  @media (min-width: @tablet) {
+    left: -72px;
+    width: 150%;
+    bottom: 85px;
+    z-index: -2;
+  }
+}
+
+.form__line--comments {
+  position: relative;
+  bottom: 55px;
+  left: 143px;
+  border-top: 2px solid #68b738;
+  width: 100%;
+  overflow: hidden;
+
+  @media (min-width: @tablet) {
+    left: -72px;
+    width: 150%;
+    bottom: 85px;
+    z-index: -2;
+  }
+}
+
+.form__line--more {
+  position: relative;
+  bottom: 55px;
+  left: 164px;
+  border-top: 2px solid #68b738;
+  width: 100%;
+  overflow: hidden;
+
+  @media (min-width: @tablet) {
+    left: -72px;
+    width: 150%;
+    bottom: 85px;
+    z-index: -2;
+  }
 }
 
 .form__description {
   width: 100%;
   height: 150px;
+  margin-top: -20px;
+  padding: 0;
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  padding-top: 9px;
+  padding-left: 15px;
+  color: #444444;
+  border: 1px solid #e7e7e7;
+
+  @media (min-width: @tablet) {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 10px 19px;
+    height: 154px;
+  }
+}
+
+.form__description--wrapper {
+  display: flex;
+
+  @media (min-width: @tablet) {
+    margin-top: 16px;
+    margin-bottom: 65px;
+  }
 }
 
 .form__check-box {
@@ -96,12 +355,16 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
-  padding-bottom: 34px;
+  padding-bottom: 22px;
+  margin-top: -20px;
 
   @media (min-width: @tablet) {
+    margin-top: -19px;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
+    font-size: 20px;
+    line-height: 30px;
   }
 
   @media (min-width: @desktop) {
@@ -111,32 +374,96 @@
   }
 }
 
-.form__container {
-  display: grid;
-  grid-template-columns: 50% 50%;
+.form__label-check {
+  padding-bottom: 12px;
+}
 
-  @media (max-width: @tablet) {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.form__check {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.form__check + label::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  border: 1px solid #cdcdcd;
+  width: 30px;
+  height: 30px;
+  margin-right: 16px;
+}
+
+.form__check:hover + label::before {
+  border: 1px solid #bababa;
+}
+
+.form__check:checked + label::before {
+  background-image: url("../../img/Vector.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.form__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (min-width: @tablet) {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+}
+
+.button--form {
+  @media (min-width: @tablet) {
+    width: 282px;
+    height: 52px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 568px;
   }
 }
 
 .form__aside {
   text-align: center;
   padding-top: 21px;
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
 
   @media (min-width: @tablet) {
     text-align: left;
+    font-size: 16px;
+    margin-top: 24px;
+  }
+
+  @media (min-width: @desktop) {
+    padding-left: 170px;
   }
 }
 
 @media (min-width: @tablet) {
   .form__button {
     padding-right: 61px;
+    margin-top: 24px;
 
     @media (min-width: @desktop) {
-      padding-right: 81px;
+      padding: 0;
     }
+  }
+}
+
+@media (min-width: @desktop) {
+  .form__contact {
+    br {
+      display: none;
+    }
+    display: grid;
+    grid-template-columns: 47.5% 47.5%;
+    gap: 5%;
   }
 }
