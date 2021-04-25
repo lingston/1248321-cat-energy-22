@@ -9,30 +9,31 @@
   <body class="page__body">
     <header class="page-header">
       <div class="page-header__container wrapper">
+      <a class ="page-header__logo--desktop" href="#">
+        <img src="img/logo-desktop.svg" width="202" height="59" alt="Логотип десктоп">
+      </a>
       <a class="page-header__logo" href="#">
         <img src="img/logo-mobile.svg" width="33.32" height="37.61" alt="Логотип">
       </a>
       <a class="page-header__logo--name" href="#">
         <img src="img/footer-logo 2.svg" width="101" height="18" alt="Название компании">
       </a>
-      <a class="page-header__logo--burger" href="#">
-        <img src="img/Logo_mobile.png" width="18" height="18 alt="временный крестик">
-      </a>
+      <div></div>
       </div>
-      <nav class="main-nav">
-        <button class="main-nav__toggle visually-hidden" type="button">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <div class="main-nav__toggle">
           <span class="visually-hidden"> Открыть меню</span>
-        </button>
+        </div>
         <div class="main-nav__wrapper wrapper--responsive">
           <ul class="main-nav__list">
-            <li class="main-nav__item ">
-              <a class="main-nav__item--link main-nav__item--active">ГЛАВНАЯ</a>
+            <li class="main-nav__item-form ">
+              <a class="main-nav__item--link-form">ГЛАВНАЯ</a>
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__item--link" href="#">КАТАЛОГ ПРОДУКЦИИ</a>
+            <li class="main-nav__item-form">
+              <a class="main-nav__item--link-form" href="#">КАТАЛОГ ПРОДУКЦИИ</a>
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__item--link" href="#">ПОДБОР ПРОГРАММЫ</a>
+            <li class="main-nav__item-form">
+              <a class="main-nav__item--link-form  main-nav__item-form--active" href="#">ПОДБОР ПРОГРАММЫ</a>
             </li>
           </ul>
         </div>
@@ -55,11 +56,11 @@
                 <td class="card__table--parameter">Масса</td>
                 <td class="card__table--value">500 г</td>
               </tr>
-              <tr>
+              <tr class="card__border-bottom">
                 <td class="card__table--parameter">Вкус</td>
                 <td class="card__table--value">Курица</td>
               </tr>
-              <tr>
+              <tr class="card__border-bottom">
                 <td class="card__table--parameter">Цена</td>
                 <td class="card__table--value">700 Р</td>
               </tr>
@@ -77,15 +78,15 @@
           <div class="card__info">
             <h3 class="card__title">CAT ENERGY <br class="card__br--mobile"> PRO <br class="card__br--tablet"> 1000 Г</h3>
             <table class="card__table">
-              <tr>
+              <tr class="card__border-bottom">
                 <td class="card__table--parameter">Масса</td>
                 <td class="card__table--value">1000 г</td>
               </tr>
-              <tr>
+              <tr class="card__border-bottom">
                 <td class="card__table--parameter">Вкус</td>
                 <td class="card__table--value">Курица</td>
               </tr>
-              <tr>
+              <tr class="card__border-bottom">
                 <td class="card__table--parameter">Цена</td>
                 <td class="card__table--value">1000 Р</td>
               </tr>
@@ -103,15 +104,15 @@
           <div class="card__info">
             <h3 class="card__title">CAT ENERGY <br class="card__br--mobile"> PRO <br class="card__br--tablet"> 500 Г</h3>
             <table class="card__table">
-              <tr>
+              <tr class="card__border-bottom">
                 <td class="card__table--parameter">Масса</td>
                 <td class="card__table--value">500 г</td>
               </tr>
-              <tr>
+              <tr class="card__border-bottom">
                 <td class="card__table--parameter">Вкус</td>
                 <td class="card__table--value">Рыба</td>
               </tr>
-              <tr>
+              <tr class="card__border-bottom">
                 <td class="card__table--parameter">Цена</td>
                 <td class="card__table--value">700 Р</td>
               </tr>
@@ -123,9 +124,12 @@
         <hr class="page-catalog__divider">
         <div class="more-product">
           <div class="more-product__wrapper">
-          <p class="more-product__symbol">+</p>
-            <h4 class="more-product__title">ПОКАЗАТЬ ЕЩЁ 100500 ТОВАРОВ</h4>
-            <p class="more-product__description">На самом деле вкусов гораздо больше</p>
+            <svg class="more-product__symbol" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line x1="15" x2="15" y2="30" stroke="#D3D3D3" stroke-width="2"/>
+              <line x1="30" y1="15" y2="15" stroke="#D3D3D3" stroke-width="2"/>
+              </svg>
+            <h4 class="more-product__title">ПОКАЗАТЬ ЕЩЁ<br class= "more-product__br">100500 ТОВАРОВ</h4>
+            <p class="more-product__description">На самом деле вкусов <br class= "more-product__br"> гораздо больше!</p>
             <input class="button card__button--show" type="button" value="ПОКАЗАТЬ ВСЕ">
           </div>
           </div>
@@ -134,6 +138,7 @@
       <div class="additional-product__desktop-grid">
       <section class="additional-product">
         <h2 class="additional-product__title">Дополнительные товары</h2>
+        <hr class ="additional__line--more">
           <div class="additional-card additional-card__line">
             <p class="additional-card__title">САХАРОЗАМЕНИТЕЛЬ</p>
             <div class="additional-card__description">
@@ -158,6 +163,14 @@
             </div>
             <input class="button additional-card__button-size" type="submit" value="ЗАКАЗАТЬ">
           </div>
+          <div class="additional-card additional-card__line">
+            <p class="additional-card__title">САХАРОЗАМЕНИТЕЛЬ</p>
+            <div class="additional-card__description">
+            <p>1 упаковка (100 г)</p>
+            <p>200 Р.</p>
+            </div>
+            <input class="button additional-card__button-size" type="submit" value="ЗАКАЗАТЬ">
+          </div>
       </section>
       <section class="gift">
         <div class="gift__wrapper--flex">
@@ -167,27 +180,22 @@
       </section>
     </div>
     </div>
-    <section class="contact">
-      <div class="contact__adress-block--form">
-      <div class="wrapper">
+    <section class="contact contact__adress-block--form">
+      <div class="wrapper form__wrapper">
       <h2 class="visually-hidden">Контакты</h2>
       <div class="contact__adress-block">
         <h3 class="contact__title">ПРИГЛАШАЕМ К СОТРУДНИЧЕСТВУ ДИЛЕРОВ</h3>
         <p class="contact__adress">ул. Большая<br>Конюшенная, д. 19/8<br><span class="contact__adress--city">Санкт Петербург</span></p>
       </div>
       </div>
-      </div>
-      <div class="contact__map">
-        <img src="img/location.jpg" width="320" height="362" alt="временное фото карты">
-      </div>
+      <iframe class="contact__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad57e73568fff411e17233f6d76abfed88e303dcfbac5df29f5a3081db0b7e0a1&amp;source=constructor" width="100%" height="362" frameborder="0"></iframe>
     </section>
     <footer class="page-footer wrapper">
       <div class="page-footer__wrapper">
         <a class="page-footer__logo" href="#">
           <img src="img/footer-logo 2.svg" width="128" height="24" alt="Название компании">
         </a>
-      <div class="page-footer_social social">
-        <ul class="social__list">
+        <ul class="page-footer__social">
           <li class="social__item">
             <a class="social__link social__link--vkontakte" href="htpps://vk.com">Вконтакте</a>
           </li>
@@ -198,7 +206,6 @@
             <a class="social__link social__link--facebook" href="https://www.facebook.com/">Фейсбук</a>
           </li>
         </ul>
-      </div>
       <div class="page-footer__copyright copyright">
         <a class="copyright__link--text" href="https://htmlacademy.ru/">HTML Academy</a>
         <a class="copyright__link--logo" href="https://htmlacademy.ru/">
@@ -208,5 +215,22 @@
     </div>
     </footer>
     </main>
+
+    <script>
+      let navMain = document.querySelector('.main-nav');
+      let navToggle= document.querySelector('.main-nav__toggle');
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function(){
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.remove('main-nav--opened');
+          navMain.classList.add('main-nav--closed');
+        }
+      })
+    </script>
+
   </body>
 </html>

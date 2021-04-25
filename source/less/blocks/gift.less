@@ -1,10 +1,22 @@
 .gift {
   background-image: url("../../img/gift-photo-mobile\ 1.jpg");
-  min-height: 289px;
+  height: 289px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   margin: 39px 0 35px 0;
+
+  @media (min-width: @tablet) {
+    height: 200px;
+    margin: 69px 0 76px 0;
+    background-position: 70% 70%;
+  }
+
+  @media (min-width: @desktop) {
+    height: 289px;
+    min-width: 245px;
+    margin: auto 0 0 auto;
+  }
 }
 
 .gift__wrapper--flex {
@@ -17,10 +29,13 @@
 
   @media (min-width: @tablet) {
     flex-direction: row;
+    height: 200px;
   }
 
   @media (min-width: @desktop) {
     flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
   }
 }
 
@@ -35,5 +50,16 @@
 
   @media (min-width: @tablet) {
     text-align: left;
+  }
+
+  @media (min-width: @desktop) {
+    text-align: center;
+    padding-bottom: 32px;
+  }
+}
+
+.gift__image {
+  @media (min-width: @desktop) {
+    padding-top: 54px;
   }
 }

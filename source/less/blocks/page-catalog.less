@@ -1,23 +1,35 @@
-.page-catalog {
-  //border-bottom: 1px solid #ebebeb;
-}
-
 .page-catalog__title {
   font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 36px;
   line-height: 36px;
+  margin-top: 27px;
+  margin-bottom: 41px;
+
+  @media (min-width: @tablet) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-top: 65px;
+    margin-bottom: 85px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-top: 74px;
+  }
 }
 
 .card {
-  padding-bottom: 24px;
+  padding-bottom: 25px;
 
   @media (min-width: @tablet) {
-    background-color: @grey;
+    background: linear-gradient(to top, @grey 84.5%, white 15.5%);
     height: 511px;
     min-width: 324px;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
   }
 
   @media (min-width: @desktop) {
@@ -27,10 +39,12 @@
 
 .card__description {
   display: flex;
+  margin-bottom: 13px;
 
   @media (min-width: @tablet) {
     flex-direction: column;
     align-items: center;
+    margin-bottom: 33px;
   }
 }
 
@@ -49,6 +63,11 @@
 .card__image--wrapper {
   width: 50%;
   margin: auto;
+
+  @media (min-width: @desktop) {
+    width: 100%;
+    margin-bottom: 46px;
+  }
 }
 
 .card__info {
@@ -63,8 +82,7 @@
   }
 
   @media (min-width: @desktop) {
-    min-width: 180px;
-    padding: 0 30px;
+    padding: 0;
   }
 }
 
@@ -72,10 +90,11 @@
   display: block;
   margin: auto;
 
+
   @media (min-width: @tablet) {
-    position: relative; //нужно узнать как сделать нормальный background
     height: auto;
     min-width: 161px;
+    margin-bottom: -40px;
   }
 }
 
@@ -87,11 +106,14 @@
   line-height: 20px;
   text-transform: uppercase;
   color: #222222;
+  margin: 24px 0 20px 0;
 
   @media (min-width: @tablet) {
     text-align: center;
     font-size: 20px;
     line-height: 24px;
+    margin-top: 34px;
+    margin-bottom: 21px;
   }
 }
 
@@ -102,12 +124,16 @@
   font-size: 12px;
   line-height: 16px;
   width: 100%;
-  padding-bottom: 13px;
+  padding: 0;
+  margin-top: -5px;
+  padding-bottom: 9px;
 
   @media (min-width: @tablet) {
     font-size: 16px;
     line-height: 16px;
-    padding-bottom: 33px;
+    padding-bottom: 0;
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -116,19 +142,52 @@
 }
 
 .page-catalog__divider {
-  position: absolute;
-  width: 100%;
-  left: 0;
+  position: relative;
+  width: 150%;
+  right: 20%;
   border-top: 1px solid #ebebeb;
+  overflow: hidden;
+  margin: 0;
 
   @media (min-width: @tablet) {
     display: none;
   }
 }
 
+@media (min-width: @tablet) {
+  .card__border-bottom {
+    display: flex;
+    justify-content: space-between;
+    min-width: 250px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid #cdcdcd;
+    margin-bottom: 5px;
+
+    @media (min-width: @desktop) {
+      min-width: 180px;
+      margin-left: 35px;
+      margin-right: 30px;
+      border-bottom: 1px solid #cdcdcd;
+    }
+  }
+}
+
 .card__button-size {
   font-size: 16px;
   line-height: 20px;
+
+  @media (min-width: @tablet) {
+    width: 248px;
+    height: 39px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 38px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 168px;
+    height: 40px;
+  }
 }
 
 @media (min-width: @tablet) {
