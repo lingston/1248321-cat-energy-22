@@ -1,3 +1,14 @@
+.additional-product {
+  @media (min-width: @tablet) {
+    border-bottom: 1px solid #cdcdcd;
+  }
+
+  @media (min-width: @desktop) {
+    margin: 0;
+    padding: 0;
+  }
+}
+
 .additional-product__title {
   font-family: "Oswald", sans-serif;
   font-style: normal;
@@ -5,24 +16,48 @@
   font-size: 24px;
   line-height: 24px;
   margin: 0;
-  padding: 25px 0 36px 0;
+  padding: 68px 0 36px 0;
   border-bottom: 1px solid #cdcdcd;
 
   @media (min-width: @tablet) {
-    margin-top: 120px;
+    margin-top: 100px;
+    background-color: white;
+    width: 411px;
+    font-size: 36px;
+    line-height: 36px;
+    border-bottom: none;
+    padding-left: 38px;
+    padding-bottom: 70px;
   }
 
   @media (min-width: @desktop) {
-    position: relative;
-    bottom: 250px;
+    margin-top: 76px;
+    padding-top: 0;
+    padding-left: 0;
   }
 }
 
 .additional-card {
   border-bottom: 1px solid #cdcdcd;
 
+  @media (min-width: @tablet) {
+    border-bottom: none;
+    padding: 10px 38px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
   @media (min-width: @desktop) {
-    display: flex;
+    display: grid;
+    grid-template-columns: 33% 31% 30%;
+    gap: 3%;
+    padding: 10px 0;
+  }
+}
+
+.additional-card__line {
+  @media (min-width: @tablet) {
+    border-top: 1px solid #cdcdcd;
   }
 }
 
@@ -34,6 +69,16 @@
   line-height: 16px;
   color: #222222;
   margin-bottom: 0;
+
+  @media (min-width: @tablet) {
+    font-size: 20px;
+    line-height: 20px;
+    margin: auto 0;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 0;
+  }
 }
 
 .additional-card__description {
@@ -46,20 +91,77 @@
   color: @dark-grey;
   justify-content: space-between;
   border-bottom: 1px solid #cdcdcd;
+
+  @media (min-width: @tablet) {
+    border-bottom: none;
+    justify-content: flex-end;
+    font-size: 16px;
+    line-height: 20px;
+
+    p {
+      padding-left: 49px;
+    }
+  }
+
+  @media (min-width: @desktop) {
+    justify-content: space-between;
+
+    p {
+      padding: 0;
+    }
+  }
 }
 
 .additional-card__button-size {
   font-size: 16px;
   line-height: 20px;
   margin-bottom: 19px;
+
+  @media (min-width: @tablet) {
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-top: 10px;
+  }
+
+  @media (min-width: @desktop) {
+    grid-column-start: -1;
+    grid-column-end: 3;
+    margin: auto 0 auto auto;
+    padding: 0;
+    font-size: 16px;
+    line-height: 20px;
+    width: 244px;
+    height: 40px;
+  }
 }
 
 .additional-product__desktop-grid {
+  @media (min-width: @tablet) {
+    margin: 0;
+  }
+
   @media (min-width: @desktop) {
-    padding-top: 191px;
     display: grid;
-    grid-template-columns: 70% 20%;
-    gap: 10%;
+    grid-template-columns: 75% 20%;
+    gap: 5%;
     padding-bottom: 86px;
+  }
+}
+
+.additional__line--more {
+  position: relative;
+  bottom: 55px;
+  left: 267px;
+  border-top: 2px solid #68b738;
+  width: 100%;
+  overflow: hidden;
+
+  @media (min-width: @tablet) {
+    left: -72px;
+    width: 150%;
+    bottom: 95px;
+    z-index: -2;
+    margin-bottom: 0;
   }
 }

@@ -1,23 +1,20 @@
 .more-product {
   text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
 
   @media (min-width: @tablet) {
     border: 2px solid #f2f2f2;
-    height: 511px;
+    height: 429px;
     min-width: 324px;
     padding: 0;
+    margin: 0;
+    margin-top: 80px;
   }
 
   @media (min-width: @desktop) {
     min-width: 245px;
   }
-}
-
-.more-product__symbol {
-  font-size: 50px;
-  color: #d3d3d3;
-  padding: 0;
-  margin: 0;
 }
 
 .more-product__title {
@@ -27,6 +24,30 @@
   font-size: 16px;
   line-height: 20px;
   color: #111111;
+  margin: 0;
+  padding-top: 23px;
+
+  @media (min-width: @tablet) {
+    font-size: 20px;
+    line-height: 22px;
+    margin: 0;
+  }
+}
+
+.more-product__symbol {
+  @media (min-width: @tablet) {
+    width: 60px;
+    height: 60px;
+    padding-top: 52px;
+  }
+}
+
+.more-product__br {
+  display: none;
+
+  @media (min-width: @tablet) {
+    display: block;
+  }
 }
 
 .more-product__description {
@@ -36,6 +57,16 @@
   font-size: 12px;
   line-height: 16px;
   color: #444444;
+  margin: 0;
+  padding-top: 8px;
+  padding-bottom: 21px;
+
+  @media (min-width: @tablet) {
+    font-size: 16px;
+    line-height: 18px;
+    padding: 0;
+    padding-bottom: 60px;
+  }
 }
 
 .card__button--show {
@@ -43,4 +74,29 @@
   color: @dark-grey;
   font-size: 16px;
   line-height: 20px;
+  margin-bottom: 0;
+
+  @media (min-width: @tablet) {
+    margin-bottom: 38px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 169px;
+    height: 40px;
+  }
+}
+
+.card__button--show:hover {
+  background-color: #ebebeb;
+  outline: none;
+}
+
+.more-product__wrapper {
+  @media (min-width: @tablet) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
 }
