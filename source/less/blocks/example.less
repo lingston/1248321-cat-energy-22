@@ -1,6 +1,5 @@
 .example {
   background-color: @grey;
-  padding-bottom: 31px;
 
   @media (min-width: @tablet) and (max-width: 1439px) {
     background: linear-gradient(to bottom, white 60%, @grey 40%);
@@ -10,19 +9,11 @@
 
   @media (min-width: @desktop) {
     border-top: none;
-    margin-top: 26px;
+    margin: 0;
     padding-bottom: 75px;
     background: linear-gradient(to bottom, white 25%, @grey 25%, @grey 75%);
+    margin-bottom: 30px;
   }
-  /*@media (min-width: @desktop) {
-    min-height: 656px;
-    position: relative;
-    background-color: white;
-    background-image: url("../../img/Rectangle\ 1.jpg");
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: 1440px 462px;
-  }*/
 }
 
 .examlpe__title {
@@ -38,6 +29,10 @@
     line-height: 60px;
     padding-top: 43px;
     margin: 0;
+  }
+
+  @media (min-width: @desktop) {
+    padding-top: 90px;
   }
 }
 
@@ -76,6 +71,10 @@
 .example__list {
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: @desktop) {
+    margin: 0;
+  }
 }
 
 .example__item {
@@ -163,6 +162,8 @@
 
   @media (min-width: @desktop) {
     display: block;
+    margin: 0;
+    padding-top: 50px;
 
     .example__price--cost {
       padding-left: 63px;
@@ -172,10 +173,14 @@
 
 @media (min-width: @desktop) {
   .example__container--desktop {
-    display: flex;
+    /*display: flex;
     justify-content: space-between;
-    height: 157px;
-    align-items: flex-end;
+    align-items: flex-end;*/
+    display: grid;
+    grid-template-columns: 45% 45%;
+    column-gap: 10%;
+    grid-template-rows: auto auto auto;
+    // height: 157px;
   }
 }
 
@@ -209,6 +214,7 @@
     @media (min-width: @desktop) {
       flex-direction: column;
       align-items: flex-start;
+      padding: 0;
     }
   }
 }
@@ -230,6 +236,219 @@
     min-height: 536px;
   }
 }
+
+//эксперементальный код
+.example__comparison {
+  --comparison: 50%;
+  --psevdo-left: 0;
+  max-width: 310px;
+  width: 310px;
+  position: relative;
+  right: 15px;
+  margin: 0 auto;
+  margin-top: 28px;
+
+  @media (min-width: @tablet) {
+    max-width: 590px;
+    width: 590px;
+  }
+
+  @media (min-width: @desktop) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    max-width: 600px;
+    width: 600px;
+    margin: 0;
+    bottom: 27px;
+    z-index: 2;
+  }
+}
+
+.comparison__top {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: var(--comparison, 50%);
+  overflow-x: hidden;
+  //background-color: lightpink;
+  background-color: #f2f2f2;
+  transition: all 0.3s ease-in-out;
+
+  @media (min-width: @tablet) {
+    background: linear-gradient(to bottom, white 248px, @grey 248px, @grey 567px);
+  }
+
+  @media (min-width: 891px) {
+    background: linear-gradient(to bottom, white 257.5px, @grey 257.5px, @grey 567px);
+  }
+
+  @media (min-width: @desktop) {
+    background: linear-gradient(to bottom, white 200px, @grey 200px, @grey 567px);
+  }
+}
+
+
+.comparison__skinny,
+.comparison__fat {
+  width: 320px;
+  height: 100%; //размеры не совпадают.
+
+  @media (min-width: @tablet) {
+    width: 590px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 600px;
+  }
+}
+
+.comparison__controls {
+  display: flex;
+  padding: 27px 0 26px 0;
+  justify-content: center;
+
+  @media (min-width: @tablet) {
+    padding-bottom: 67px;
+  }
+
+  @media (min-width: @desktop) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    padding-bottom: 0;
+    position: relative;
+    top: 55px;
+  }
+}
+
+.comparison__input {
+  width: 84px;
+
+  @media (min-width: @tablet) {
+    width: 428px;
+    margin: 0 26px;
+  }
+}
+
+.comparison__btn {
+  border: none;
+  background-color: #f2f2f2;
+  outline: none;
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  padding: 5px 0;
+
+  @media (min-width: @tablet) {
+    border-bottom: 1px dotted #dccdcd;
+    padding: 7px 0;
+    font-size: 20px;
+  }
+
+  @media (min-width: @desktop) {
+    height: fit-content;
+    padding-top: 55px;
+  }
+}
+
+.comparison__btn:hover {
+  border-bottom: 1px solid #dccdcd;
+}
+
+/*
+.comparison__input{
+  flex: 1 1 auto;
+  margin: 0 1em;
+}
+
+/*.example__comparison,
+.comparison__skinny,
+.comparison__fat,
+.comparison__controls{
+  width: 690px;
+  max-width: 690px;
+  min-width: 690px;
+}
+
+/*
+.comparison__controls::before,
+.comparison__controls::after{
+  content: '';
+  display: block;
+  position: absolute;
+
+}
+.comparison__controls::before{
+  width: 84px;
+  height: 14px;
+  background: #f8f7f7;
+  left: 50%;
+  top: calc(50% - 7px);
+  transform: translateX(-50%);
+  border: 1px solid #CDCDCD;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+/*.comparison__controls::after{
+  width: 35px;
+  height: 6px;
+  background: #68B738;
+  border-radius: 6px;
+  left: calc(50% - 35px);
+  top: calc(50% - 3px);
+  transform: translateX(var(--psevdo-left))
+}
+.comparison__btn::before{
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  top: calc(50% - 10px);
+  outline: 1px solid orangered;
+  z-index: 1;
+}
+.comparison__btn--before::before{
+  left: 105px;
+
+}
+.comparison__btn--after::before{
+  left: 155px;
+}
+
+.comparison__input{
+  flex: 1 1 auto;
+  margin: 0 1em;
+  display: none;
+}
+
+@media (min-width: 690px){
+  .example__comparison,
+  .comparison__skinny,
+  .comparison__fat,
+  .comparison__controls{
+    width: 690px;
+    max-width: 690px;
+    min-width: 690px;
+  }
+  .comparison__input{
+    display: block;
+  }
+  .comparison__controls::before,
+  .comparison__controls::after{
+    display: none;
+  }
+  .comparison__btn::before{
+    display: none;
+  }
+} */
+
 
 //слайдер было-стало, нужно доработать или переделать. не пропускает в таком синтаксисе.
 /*
