@@ -4,6 +4,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png">
+    <link rel="manifest" href="img/icons/site.webmanifest">
+    <link rel="mask-icon" href="img/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="img/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
     <title> Кэт энерджи каталог</title>
   </head>
   <body class="page__body">
@@ -47,7 +56,10 @@
         <div class="card">
           <div class="card__description">
           <div class="card__image--wrapper">
-          <img class="card__image" src="img/catalog-1-desktop 1.svg" width="68" height="86" alt="Фото продукции">
+            <picture>
+              <source media="(min-width: 767px)" srcset="img/catalog-1-desktop1.svg" >
+            <img class="card__image" src="img/catalog-1-desktop1.png"  srcset="img/catalog-1-desktop1@2x.png 2x" width="160" alt="Фото продукции">
+            </picture>
           </div>
           <div class="card__info">
             <h3 class="card__title">CAT ENERGY <br class="card__br--mobile"> PRO <br class="card__br--tablet"> 500 Г</h3>
@@ -73,7 +85,10 @@
         <div class="card">
           <div class="card__description">
           <div class="card__image--wrapper">
-          <img class="card__image" src="img/catalog-2-desktop 1.svg" width="84" height="100.8" alt="Фото продукции">
+            <picture>
+            <source media="(min-width: 767px)" srcset="img/catalog-2-desktop1.svg" >
+            <img class="card__image card__image--big" src="img/catalog-2-desktop1.png"  srcset="img/catalog-2-desktop1@2x.png 2x" width= "160" alt="Фото продукции">
+            </picture>
           </div>
           <div class="card__info">
             <h3 class="card__title">CAT ENERGY <br class="card__br--mobile"> PRO <br class="card__br--tablet"> 1000 Г</h3>
