@@ -114,7 +114,10 @@
         <div class="card">
           <div class="card__description">
           <div class="card__image--wrapper">
-          <img class="card__image" src="img/catalog-3-desktop.jpg" width="68" height="86" alt="Фото продукции">
+            <picture>
+              <source media="(min-width: 767px)" srcset="img/catalog-3-desktop.svg" >
+              <img class="card__image card__image--big" src="img/catalog-3-desktop.png"  srcset="img/catalog-3-desktop@2x.png 2x" width= "68" alt="Фото продукции">
+              </picture>
           </div>
           <div class="card__info">
             <h3 class="card__title">CAT ENERGY <br class="card__br--mobile"> PRO <br class="card__br--tablet"> 500 Г</h3>
