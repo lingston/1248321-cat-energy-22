@@ -26,9 +26,20 @@
   padding: 0 33px 18px 20px;
   margin-top: 20px;
 
-  @media (min-width: @tablet) {
+  @media (min-width: @tablet) and (max-width: 1439px) {
+    padding: 0;
+    padding-left: 50px;
+    padding-top: 77px;
+    padding-bottom: 53px;
+    padding-right: 30px;
+    margin-top: 0;
     margin-bottom: 30px;
-    padding: 41px 279px 53px 52px;
+    display: grid;
+    grid-template-columns: 59% 41%;
+    grid-template-rows: auto auto auto;
+    /* переделываю на грид
+    margin-bottom: 30px;
+    padding: 41px 279px 53px 52px;*/
   }
 
   @media (min-width: @desktop) {
@@ -43,8 +54,10 @@
   font-weight: 400;
   font-size: 24px;
   line-height: 37px;
-  padding-left: 71px;
   padding-top: 30px;
+  padding-left: 74px;
+  padding-bottom: 30px;
+  margin: 0;
 
   @media (min-width: @tablet) {
     padding-top: 0;
@@ -55,38 +68,45 @@
 
   @media (min-width: @desktop) {
     padding-left: 163px;
+    padding-top: 36px;
+    padding-bottom: 0;
   }
 }
 
-.program__item--skinny {
-  background-image: url("../../img/cat_back.svg");
-  background-repeat: no-repeat;
-  background-position: 22px 21px;
+.program__icon-cat {
+  position: absolute;
+  padding-top: 20px;
 
-  @media (min-width: @tablet) {
-    background-position: center right 62px;
-    background-size: 200px 211px;
+  @media (min-width: @tablet) and (max-width: 1439px) {
+    position: static;
+    padding: 0;
+    margin: 0;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    width: 200px;
+    height: 211px;
+    justify-self: center;
   }
 
   @media (min-width: @desktop) {
-    background-position: 52px 41px;
-    background-size: 100px 106px;
+    width: 100px;
+    height: 106px;
+    padding-top: 0;
   }
 }
 
-.program__item--fat {
-  background-image: url("../../img/cat_back-2.svg");
-  background-repeat: no-repeat;
-  background-position: 13px 21px;
-
-  @media (min-width: @tablet) {
-    background-position: center right 28px;
-    background-size: 268px 200px;
+.program__icon-cat--fat {
+  @media (min-width: @tablet) and (max-width: 1439px) {
+    width: 268px;
+    height: 200px;
+    padding-left: 0;
   }
 
   @media (min-width: @desktop) {
-    background-position: 33px 47px;
-    background-size: 134px 100px;
+    width: 134px;
+    height: 100px;
   }
 }
 
@@ -98,6 +118,7 @@
   line-height: 18px;
   color: @dark-grey;
   padding-bottom: 6px;
+  margin: 0;
 
   @media (min-width: @tablet) {
     font-size: 16px;
@@ -106,8 +127,8 @@
   }
 
   @media (min-width: @desktop) {
-    padding-top: 47px;
-    padding-bottom: 7px;
+    padding-top: 77px;
+    padding-bottom: 27px;
   }
 }
 

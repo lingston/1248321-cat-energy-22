@@ -26,8 +26,48 @@
   }
 }
 
-.page-header__logo {
-  margin-right: 10px;
+.logo {
+  display: none;
+
+  @media (min-width: @tablet) {
+    display: block;
+    width: 174px;
+    height: auto;
+
+    .logo-splashes {
+      display: none;
+
+      @media (min-width: @desktop) {
+        display: block;
+      }
+    }
+
+    @media (min-width: @desktop) {
+      width: 202px;
+    }
+  }
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.logo:active {
+  opacity: 0.6;
+}
+
+.page-header__logo:hover {
+  opacity: 0.8;
+}
+
+.page-header__logo:active {
+  opacity: 0.6;
+}
+
+@media (min-width: @tablet) {
+  .page-header__logo {
+    display: none;
+  }
 }
 
 .page-header__logo--name {
