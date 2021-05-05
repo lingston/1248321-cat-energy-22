@@ -1,21 +1,35 @@
 .gift {
-  background-image: url("../../img/gift-photo-mobile\ 1.jpg");
+  background-image: url("../../img/gift-photo-mobile1.jpg");
   height: 289px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   margin: 39px 0 35px 0;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/gift-photo-mobile1@2x.jpg");
+  }
+
   @media (min-width: @tablet) {
     height: 200px;
     margin: 69px 0 76px 0;
     background-position: 70% 70%;
+    background-image: url("../../img/gift-photo-tablet1.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/gift-photo-tablet1@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop) {
     height: 289px;
     min-width: 245px;
     margin: auto 0 0 auto;
+    background-image: url("../../img/gift-photo-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/gift-photo-desktop@2x.jpg");
+    }
   }
 }
 

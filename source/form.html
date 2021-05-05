@@ -18,16 +18,17 @@
   <body class="page__body">
     <header class="page-header">
       <div class="page-header__container wrapper">
-      <a class ="page-header__logo--desktop" href="#">
-        <img src="img/logo-desktop.svg" width="202" height="59" alt="Логотип десктоп">
-      </a>
-      <a class="page-header__logo" href="#">
-        <img src="img/logo-mobile.svg" width="33.32" height="37.61" alt="Логотип">
-      </a>
-      <a class="page-header__logo--name" href="#">
-        <img src="img/footer-logo 2.svg" width="101" height="18" alt="Название компании">
-      </a>
-      <div></div>
+        <a class="page-header__logo" href="#">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg" width="202" height="60">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" width="174" height="51.68">
+          <img src="img/logo-mobile.svg" width="33.32" height="37.61" alt="Логотип">
+          </picture>
+        </a>
+        <a class="page-header__logo--name" href="#">
+          <img src="img/footer-logo 2.svg" width="101" height="18" alt="Название компании">
+        </a>
+        <div></div>
       </div>
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__toggle">
