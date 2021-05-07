@@ -71,7 +71,7 @@
   }
 }
 
-.copyright__link--text {
+.copyright__link {
   font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -79,15 +79,24 @@
   line-height: 18px;
   text-decoration: none;
   color: @dark-grey;
-  padding: 22px 0;
-  width: 114px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   @media (min-width: @tablet) {
-    padding-right: 22px;
+    width: 163px;
   }
 }
 
+.copyright__link:active {
+  opacity: 0.3;
+}
+
 .copyright__link--logo {
-  height: 34px;
-  padding: 22px 0;
+  fill: #666666;
+}
+
+.copyright__link--logo:hover {
+  fill: #68b738;
 }
