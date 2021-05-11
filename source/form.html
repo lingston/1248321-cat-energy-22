@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html class ="page" lang="ru">
-  <link rel="stylesheet" href="css/style.css"
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png">
@@ -58,9 +60,9 @@
           <path d="M194.69 36.15L190.16 22.58H192.88L196.09 32.7L199.25 22.58H202L197.5 36.15V43.55H194.7L194.69 36.15Z" fill="#444444"/>
           </g>
           </svg>
-          <img class="page-header__logo" src="img/logo-mobile.svg" width="33.32" height="37.61" alt="Логотип">
+          <img class="page-header__logo" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип">
         </a>
-          <img class="page-header__logo--name" src="img/footer-logo 2.svg" width="101" height="18" alt="Название компании">
+          <img class="page-header__logo--name" src="img/footer-logo2.svg" width="101" height="18" alt="Название компании">
         <div></div>
       </div>
       <nav class="main-nav main-nav--closed main-nav--nojs">
@@ -70,13 +72,13 @@
         <div class="main-nav__wrapper wrapper--responsive">
           <ul class="main-nav__list">
             <li class="main-nav__item-form ">
-              <a class="main-nav__item--link-form">ГЛАВНАЯ</a>
+              <a class="main-nav__item--link-form" href="#">ГЛАВНАЯ</a>
             </li>
             <li class="main-nav__item-form">
               <a class="main-nav__item--link-form" href="#">КАТАЛОГ ПРОДУКЦИИ</a>
             </li>
             <li class="main-nav__item-form">
-              <a class="main-nav__item--link-form  main-nav__item-form--active" href="#">ПОДБОР ПРОГРАММЫ</a>
+              <a class="main-nav__item--link-form  main-nav__item-form--active">ПОДБОР ПРОГРАММЫ</a>
             </li>
           </ul>
         </div>
@@ -85,7 +87,6 @@
     <main class="page-form">
       <h1 class="page-form__title">Подбор программы</h1>
       <form class="form">
-
             <h2 class="form__title--name wrapper">Заполните анкету, и мы подберем
               программу питания для вашего кота</h2>
               <div class="form__desktop">
@@ -130,12 +131,12 @@
             <div class= "form__contact">
             <div class="form__item">
             <label class="form__label" for="email-field">E-MAIL:*</label>
-              <input class= "form__input form__input--mail" type="email" name="email" id="email-field" placeholder="mail@mail.ru"required >
+              <input class= "form__input form__input--mail" type="email" name="email" id="email-field" placeholder="mail@mail.ru" required >
             </div>
               <br>
             <div class="form__item">
               <label class="form__label" for="tel-field">ТЕЛЕФОН:*</label>
-              <input class= "form__input form__input--phone" type="tel" name="tel" id="tel-field" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}""  placeholder="8 (960) 900-60-90" required>
+              <input class= "form__input form__input--phone" type="tel" name="tel" id="tel-field" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}"  placeholder="8 (960) 900-60-90" required>
             </div>
             </div>
             </div>
@@ -182,17 +183,17 @@
       <footer class="page-footer wrapper">
         <div class="page-footer__wrapper">
           <a class="page-footer__logo" href="#">
-            <img src="img/footer-logo 2.svg" width="128" height="24" alt="Название компании">
+            <img src="img/footer-logo2.svg" width="128" height="24" alt="Название компании">
           </a>
           <ul class="page-footer__social">
             <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="htpps://vk.com">Вконтакте</a>
+              <a href="htpps://vk.com"> <svg class="social__link" width="23" height="16"><use href="img/sprite.svg#icon_vkontakte"></use> </svg> </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--instagram" href="https://www.instagram.com/">Инстаграм</a>
+              <a href="https://www.instagram.com/"> <svg class="social__link social__link--instagram" width="16" height="16"><use href="img/sprite.svg#icon_instagram"></use> </svg> </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--facebook" href="https://www.facebook.com/">Фейсбук</a>
+              <a href="https://www.facebook.com/"><svg class="social__link" width="22" height="22"><use href="img/sprite.svg#icon_facebook"></use> </svg> </a>
             </li>
           </ul>
         <div class="page-footer__copyright copyright">
@@ -202,25 +203,7 @@
         </div>
       </div>
       </footer>
-
-
     </main>
-  <script>
-    let navMain = document.querySelector('.main-nav');
-    let navToggle= document.querySelector('.main-nav__toggle');
-    navMain.classList.remove('main-nav--nojs');
-
-    navToggle.addEventListener('click', function(){
-      if (navMain.classList.contains('main-nav--closed')) {
-        navMain.classList.remove('main-nav--closed');
-        navMain.classList.add('main-nav--opened');
-      } else {
-        navMain.classList.remove('main-nav--opened');
-        navMain.classList.add('main-nav--closed');
-      }
-    })
-  </script>
-
-
+    <script src="script/script.min.js"></script>
   </body>
 </html>
