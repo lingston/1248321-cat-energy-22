@@ -51,12 +51,23 @@
 }
 
 .social__link {
-  text-decoration: none;
-  color: black;
+  fill: none;
+}
+
+.social__link:hover {
+  stroke: #68b738;
+}
+
+.social__link:active {
+  opacity: 0.3;
 }
 
 .social__link--instagram {
-  padding: 0 10px;
+  padding: 0 34px 0 37px;
+
+  @media (min-width: @tablet) {
+    padding: 0 25px 0 28px;
+  }
 }
 
 .page-footer__copyright {
