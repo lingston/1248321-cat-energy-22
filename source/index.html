@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html class ="page" lang="ru">
-  <link rel="stylesheet" href="css/style.css"
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png">
@@ -57,9 +59,9 @@
           <path d="M194.69 36.15L190.16 22.58H192.88L196.09 32.7L199.25 22.58H202L197.5 36.15V43.55H194.7L194.69 36.15Z" fill="#444444"/>
           </g>
           </svg>
-          <img class="page-header__logo" src="img/logo-mobile.svg" width="33.32" height="37.61" alt="Логотип">
+          <img class="page-header__logo" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип">
         </a>
-          <img class="page-header__logo--name" src="img/footer-logo 2.svg" width="101" height="18" alt="Название компании">
+          <img class="page-header__logo--name" src="img/footer-logo2.svg" width="101" height="18" alt="Название компании">
         <div></div>
       </div>
       <nav class="main-nav main-nav--closed main-nav--nojs">
@@ -95,7 +97,7 @@
               <source type="image/webp" media="(min-width: 1440px)" srcset="img/index-can.webp 1x, img/index-can@2x.webp 2x">
               <source type="image/webp" srcset="img/index-can-mobile.webp 1x, img/index-can-mobile@2x.webp 2x">
               <source media="(min-width: 1440px)" srcset="img/index-can.png 1x, img/index-can@2x.png 2x">
-              <img src="img/index-can-mobile 1.png" srcset="img/index-can-mobile@2x.png 2x" width="280" height="270" alt="фото продукта">
+              <img src="img/index-can-mobile1.png" srcset="img/index-can-mobile@2x.png 2x" width="280" height="270" alt="фото продукта">
             </picture>
           </div>
           <button class="button choice__button">ПОДОБРАТЬ ПРОГРАММУ</button>
@@ -131,7 +133,6 @@
             </li>
           </ul>
         </div>
-        </div>
       </section>
       <section class="how-work">
         <div class="wrapper">
@@ -164,7 +165,7 @@
             <div class="example__comparison">
             <img class="comparison__skinny" src="img/cat-skinny.png" srcset="img/cat-skinny@2x.png 2x" alt="худой кот" width="311" height="232">
             <div class="comparison__top">
-              <img  class="comparison__fat" src="img/cat-fat.png" srcset="img/cat-fat@2x.png 2x" alt="кот в теле" width="311" height="232"  class="comparison__fat">
+              <img class="comparison__fat" src="img/cat-fat.png" srcset="img/cat-fat@2x.png 2x" alt="кот в теле" width="311" height="232">
             </div>
           </div>
                 <div class="comparison__controls">
@@ -187,17 +188,17 @@
       <footer class="page-footer wrapper">
         <div class="page-footer__wrapper">
           <a class="page-footer__logo" href="#">
-            <img src="img/footer-logo 2.svg" width="128" height="24" alt="Название компании">
+            <img src="img/footer-logo2.svg" width="128" height="24" alt="Название компании">
           </a>
           <ul class="page-footer__social">
             <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="htpps://vk.com">Вконтакте</a>
+              <a href="htpps://vk.com"> <svg class="social__link" width="23" height="16"><use href="img/sprite.svg#icon_vkontakte"></use> </svg> </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--instagram" href="https://www.instagram.com/">Инстаграм</a>
+              <a href="https://www.instagram.com/"> <svg class="social__link social__link--instagram" width="16" height="16"><use href="img/sprite.svg#icon_instagram"></use> </svg> </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--facebook" href="https://www.facebook.com/">Фейсбук</a>
+              <a href="https://www.facebook.com/"><svg class="social__link" width="22" height="22"><use href="img/sprite.svg#icon_facebook"></use> </svg> </a>
             </li>
           </ul>
         <div class="page-footer__copyright copyright">
@@ -207,51 +208,7 @@
         </div>
       </div>
       </footer>
-
-
     </main>
-  <script>
-    let navMain = document.querySelector('.main-nav');
-    let navToggle= document.querySelector('.main-nav__toggle');
-    navMain.classList.remove('main-nav--nojs');
-
-    navToggle.addEventListener('click', function(){
-      if (navMain.classList.contains('main-nav--closed')) {
-        navMain.classList.remove('main-nav--closed');
-        navMain.classList.add('main-nav--opened');
-      } else {
-        navMain.classList.remove('main-nav--opened');
-        navMain.classList.add('main-nav--closed');
-      }
-    })
-
-    const input = document.querySelector('.comparison__input')
-const buttons = document.querySelectorAll('.comparison__btn')
-
-console.log(buttons)
-
-const comparison = document.querySelector('.example__comparison')
-
-input.addEventListener('input', function(evt){
-  const value = (100 - input.value)  + '%'
-  comparison.style.setProperty('--comparison', value)
-})
-
-for(btn of buttons){
-  btn.addEventListener('click', (evt) => {
-    console.log(evt.target.dataset.value)
-    const btnDataValue = evt.target.dataset.value
-    if (btnDataValue > 0)
-    {
-      comparison.style.setProperty('--psevdo-left', '35px')
-    } else {
-      comparison.style.setProperty('--psevdo-left', '0')
-    }
-    comparison.style.setProperty('--comparison', btnDataValue + '%')
-    input.value = (100 - btnDataValue)
-
-  })
-}
-  </script>
+    <script src="script/script.min.js"></script>
   </body>
 </html>
