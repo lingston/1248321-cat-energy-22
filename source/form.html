@@ -17,7 +17,7 @@
     <meta name="theme-color" content="#ffffff">
     <title> Кэт энерджи форма</title>
   </head>
-  <body class="page__body">
+  <body class="body">
     <header class="page-header">
       <div class="page-header__container wrapper">
         <a href="#">
@@ -62,23 +62,23 @@
           </svg>
           <img class="page-header__logo" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип">
         </a>
-          <img class="page-header__logo--name" src="img/footer-logo2.svg" width="101" height="18" alt="Название компании">
+          <img class="page-header__name" src="img/footer-logo2.svg" width="101" height="18" alt="Название компании">
         <div></div>
       </div>
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__toggle">
           <span class="visually-hidden"> Открыть меню</span>
         </div>
-        <div class="main-nav__wrapper wrapper--responsive">
+        <div class="main-nav__wrapper wrapper-responsive">
           <ul class="main-nav__list">
             <li class="main-nav__item-form ">
-              <a class="main-nav__item--link-form" href="#">ГЛАВНАЯ</a>
+              <a class="main-nav__link-form" href="index.html">ГЛАВНАЯ</a>
             </li>
             <li class="main-nav__item-form">
-              <a class="main-nav__item--link-form" href="#">КАТАЛОГ ПРОДУКЦИИ</a>
+              <a class="main-nav__link-form" href="catalog.html">КАТАЛОГ ПРОДУКЦИИ</a>
             </li>
             <li class="main-nav__item-form">
-              <a class="main-nav__item--link-form  main-nav__item-form--active">ПОДБОР ПРОГРАММЫ</a>
+              <a class="main-nav__link-form  main-nav__link-form--active">ПОДБОР ПРОГРАММЫ</a>
             </li>
           </ul>
         </div>
@@ -87,10 +87,10 @@
     <main class="page-form">
       <h1 class="page-form__title">Подбор программы</h1>
       <form class="form">
-            <h2 class="form__title--name wrapper">Заполните анкету, и мы подберем
+            <h2 class="form__title-name wrapper">Заполните анкету, и мы подберем
               программу питания для вашего кота</h2>
               <div class="form__desktop">
-              <div class="wrapper form__wrapper">
+              <div class="wrapper">
               <div class="form__name">
               <div class="form__item">
               <label class="form__label" for="name-field">ИМЯ:*</label>
@@ -108,7 +108,7 @@
           </div>
           <div class="form__program">
             <h2 class="visually-hidden">Выбор программы</h2>
-            <div class="wrapper__form">
+            <div class="form-wrapper-program">
               <input class="form__radio-input" type="radio" name="slim-program" value="slim" id="for-slim">
               <label for="for-slim" class="form__radio-label">
               ПОХУДЕНИЕ
@@ -124,10 +124,10 @@
           </div>
           </div>
         </div>
-          <div class="wrapper form__wrapper">
-          <div class="form__wrapper--contact">
-            <h2 class ="form__title--contact">Контактные данные <br> (владельца кота)</h2>
-            <hr class ="form__line--contact">
+          <div class="wrapper">
+          <div class="form__wrapper-contact">
+            <h2 class ="form__title-contact">Контактные данные <br> (владельца кота)</h2>
+            <hr class ="form__line-contact">
             <div class= "form__contact">
             <div class="form__item">
             <label class="form__label" for="email-field">E-MAIL:*</label>
@@ -142,14 +142,14 @@
             </div>
             </div>
           <div class="wrapper form__wrapper">
-            <h2 class="form__title--contact">Комментарии</h2>
-            <hr class ="form__line--comments">
-            <div class= "form__description--wrapper">
+            <h2 class="form__title-contact">Комментарии</h2>
+            <hr class ="form__line-comments">
+            <div class= "form__description-wrapper">
               <textarea class="form__description" name="behavior" id="behavior-field" rows="5">РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА</textarea>
             </div>
-          <div class="form__wrapper--more">
-            <h2 class="form__title--contact"> Дополнительно </h2>
-            <hr class ="form__line--more">
+          <div class="form__wrapper-more">
+            <h2 class="form__title-contact"> Дополнительно </h2>
+            <hr class ="form__line-more">
             <div class="form__check-box">
               <input class="form__check" type="checkbox" name="sugar" id="sugar-field" checked>
               <label class="form__label-check" for="sugar-field">САХАРОЗАМЕНИТЕЛЬ</label>
@@ -170,12 +170,12 @@
         </div>
       </form>
 
-      <section class="contact contact__adress-block--form">
-        <div class="wrapper form__wrapper">
+      <section class="contact contact--form">
+        <div class="wrapper contact__form-wrapper">
         <h2 class="visually-hidden">Контакты</h2>
         <div class="contact__adress-block">
           <h3 class="contact__title">ПРИГЛАШАЕМ К СОТРУДНИЧЕСТВУ ДИЛЕРОВ</h3>
-          <p class="contact__adress">ул. Большая<br>Конюшенная, д. 19/8<br><span class="contact__adress--city">Санкт Петербург</span></p>
+          <p class="contact__adress">ул. Большая<br>Конюшенная, д. 19/8<br><span class="contact__adress-city">Санкт Петербург</span></p>
         </div>
         </div>
         <iframe class="contact__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad57e73568fff411e17233f6d76abfed88e303dcfbac5df29f5a3081db0b7e0a1&amp;source=constructor" width="100%" height="362" frameborder="0"></iframe>
@@ -186,19 +186,19 @@
             <img src="img/footer-logo2.svg" width="128" height="24" alt="Название компании">
           </a>
           <ul class="page-footer__social">
-            <li class="social__item">
-              <a href="htpps://vk.com"> <svg class="social__link" width="23" height="16"><use href="img/sprite.svg#icon_vkontakte"></use> </svg> </a>
+            <li class="page-footer__social-item">
+              <a href="htpps://vk.com"> <svg class="page-footer__social-link" width="23" height="16"><use href="img/sprite.svg#icon_vkontakte"></use> </svg> </a>
             </li>
-            <li class="social__item">
-              <a href="https://www.instagram.com/"> <svg class="social__link social__link--instagram" width="16" height="16"><use href="img/sprite.svg#icon_instagram"></use> </svg> </a>
+            <li class="page-footer__social-item">
+              <a href="https://www.instagram.com/"> <svg class="page-footer__social-link page-footer__social-link--instagram" width="16" height="16"><use href="img/sprite.svg#icon_instagram"></use> </svg> </a>
             </li>
-            <li class="social__item">
-              <a href="https://www.facebook.com/"><svg class="social__link" width="22" height="22"><use href="img/sprite.svg#icon_facebook"></use> </svg> </a>
+            <li class="page-footer__social-item">
+              <a href="https://www.facebook.com/"><svg class="page-footer__social-link" width="22" height="22"><use href="img/sprite.svg#icon_facebook"></use> </svg> </a>
             </li>
           </ul>
         <div class="page-footer__copyright copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/"> HTML Academy
-          <svg class="copyright__link--logo" width="27" height="34"> <use href="img/sprite.svg#icon__html-academy"></use></svg>
+          <svg class="copyright__link-logo" width="27" height="34"> <use href="img/sprite.svg#icon__html-academy"></use></svg>
           </a>
         </div>
       </div>
