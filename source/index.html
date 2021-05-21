@@ -16,7 +16,7 @@
     <meta name="theme-color" content="#ffffff">
     <title> Кэт энерджи</title>
   </head>
-  <body class="page__body">
+  <body class="body">
     <header class="page-header">
       <div class="page-header__container wrapper">
         <a href="#">
@@ -61,23 +61,23 @@
           </svg>
           <img class="page-header__logo" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип">
         </a>
-          <img class="page-header__logo--name" src="img/footer-logo2.svg" width="101" height="18" alt="Название компании">
+          <img class="page-header__name" src="img/footer-logo2.svg" width="101" height="18" alt="Название компании">
         <div></div>
       </div>
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__toggle">
           <span class="visually-hidden"> Открыть меню</span>
         </div>
-        <div class="main-nav__wrapper wrapper--responsive">
+        <div class="main-nav__wrapper wrapper-responsive">
           <ul class="main-nav__list">
             <li class="main-nav__item ">
-              <a class="main-nav__item--link main-nav__item--active">ГЛАВНАЯ</a>
+              <a class="main-nav__link main-nav__link--active">ГЛАВНАЯ</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__item--link" href="#">КАТАЛОГ ПРОДУКЦИИ</a>
+              <a class="main-nav__link" href="catalog.html">КАТАЛОГ ПРОДУКЦИИ</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__item--link" href="#">ПОДБОР ПРОГРАММЫ</a>
+              <a class="main-nav__link" href="form.html">ПОДБОР ПРОГРАММЫ</a>
             </li>
           </ul>
         </div>
@@ -86,22 +86,22 @@
     <main class="page-main">
       <h1 class="visually-hidden">Интернет магазин здорового питания для котов</h1>
       <section class="choiсe">
-        <div class="choice__color">
-        <div class="wrapper choice__wrapper">
-          <header class="choice__header">
-          <h2 class="choice__title">Функциональное<br> питание для котов </h2>
-          <h3 class="choice__slogan">ЗАНЯЛСЯ СОБОЙ? ЗАЙМИСЬ КОТОМ!</h3>
-          </header>
-          <div class="choice__picture">
-            <picture>
-              <source type="image/webp" media="(min-width: 1440px)" srcset="img/index-can.webp 1x, img/index-can@2x.webp 2x">
-              <source type="image/webp" srcset="img/index-can-mobile.webp 1x, img/index-can-mobile@2x.webp 2x">
-              <source media="(min-width: 1440px)" srcset="img/index-can.png 1x, img/index-can@2x.png 2x">
-              <img src="img/index-can-mobile1.png" srcset="img/index-can-mobile@2x.png 2x" width="280" height="270" alt="фото продукта">
-            </picture>
+        <div class="offer">
+          <div class="wrapper offer__wrapper">
+            <header class="offer__header">
+            <h2 class="offer__title">Функциональное<br> питание для котов </h2>
+            <h3 class="offer__slogan">ЗАНЯЛСЯ СОБОЙ? ЗАЙМИСЬ КОТОМ!</h3>
+            </header>
+            <div class="offer__picture">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/index-can.webp 1x, img/index-can@2x.webp 2x">
+                <source type="image/webp" srcset="img/index-can-mobile.webp 1x, img/index-can-mobile@2x.webp 2x">
+                <source media="(min-width: 1440px)" srcset="img/index-can.png 1x, img/index-can@2x.png 2x">
+                <img src="img/index-can-mobile1.png" srcset="img/index-can-mobile@2x.png 2x" width="280" height="270" alt="фото продукта">
+              </picture>
+            </div>
+            <button class="button offer__button">ПОДОБРАТЬ ПРОГРАММУ</button>
           </div>
-          <button class="button choice__button">ПОДОБРАТЬ ПРОГРАММУ</button>
-        </div>
         </div>
       </section>
       <section class="program">
@@ -146,8 +146,8 @@
         </div>
       </section>
       <section class="example">
-        <div class="wrapper example__container--desktop">
-          <h2 class="examlpe__title">Живой пример</h2>
+        <div class="wrapper example__container-desktop">
+          <h2 class="example__title">Живой пример</h2>
           <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
           <div class= "example__container">
           <dl class="example__list">
@@ -160,12 +160,12 @@
               <dd class="example__description example__description--time">затрачено времени</dd>
             </div>
           </dl>
-          <p class="example__price" >ЗАТРАТЫ НА ПИТАНИЕ: <span class="example__price--cost">15000РУБ.</span></p>
+          <p class="example__price" >ЗАТРАТЫ НА ПИТАНИЕ: <span class="example__price-cost">15000РУБ.</span></p>
           </div>
             <div class="example__comparison">
-            <img class="comparison__skinny" src="img/cat-skinny.png" srcset="img/cat-skinny@2x.png 2x" alt="худой кот" width="311" height="232">
-            <div class="comparison__top">
-              <img class="comparison__fat" src="img/cat-fat.png" srcset="img/cat-fat@2x.png 2x" alt="кот в теле" width="311" height="232">
+            <img class="example__comparison-skinny" src="img/cat-skinny.png" srcset="img/cat-skinny@2x.png 2x" alt="худой кот" width="311" height="232">
+            <div class="example__comparison-top">
+              <img class="example__comparison-fat" src="img/cat-fat.png" srcset="img/cat-fat@2x.png 2x" alt="кот в теле" width="311" height="232">
             </div>
           </div>
                 <div class="comparison__controls">
@@ -180,7 +180,7 @@
         <h2 class="visually-hidden">Контакты</h2>
         <div class="contact__adress-block">
           <h3 class="contact__title">ПРИГЛАШАЕМ К СОТРУДНИЧЕСТВУ ДИЛЕРОВ</h3>
-          <p class="contact__adress">ул. Большая<br>Конюшенная, д. 19/8<br><span class="contact__adress--city">Санкт Петербург</span></p>
+          <p class="contact__adress">ул. Большая<br>Конюшенная, д. 19/8<br><span class="contact__adress-city">Санкт Петербург</span></p>
         </div>
         </div>
         <iframe class="contact__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad57e73568fff411e17233f6d76abfed88e303dcfbac5df29f5a3081db0b7e0a1&amp;source=constructor" width="100%" height="362" frameborder="0"></iframe>
@@ -191,19 +191,19 @@
             <img src="img/footer-logo2.svg" width="128" height="24" alt="Название компании">
           </a>
           <ul class="page-footer__social">
-            <li class="social__item">
-              <a href="htpps://vk.com"> <svg class="social__link" width="23" height="16"><use href="img/sprite.svg#icon_vkontakte"></use> </svg> </a>
+            <li class="page-footer__social-item">
+              <a href="htpps://vk.com"> <svg class="page-footer__social-link" width="23" height="16"><use href="img/sprite.svg#icon_vkontakte"></use> </svg> </a>
             </li>
-            <li class="social__item">
-              <a href="https://www.instagram.com/"> <svg class="social__link social__link--instagram" width="16" height="16"><use href="img/sprite.svg#icon_instagram"></use> </svg> </a>
+            <li class="page-footer__social-item">
+              <a href="https://www.instagram.com/"> <svg class="page-footer__social-link page-footer__social-link--instagram" width="16" height="16"><use href="img/sprite.svg#icon_instagram"></use> </svg> </a>
             </li>
-            <li class="social__item">
-              <a href="https://www.facebook.com/"><svg class="social__link" width="22" height="22"><use href="img/sprite.svg#icon_facebook"></use> </svg> </a>
+            <li class="page-footer__social-item">
+              <a href="https://www.facebook.com/"><svg class="page-footer__social-link" width="22" height="22"><use href="img/sprite.svg#icon_facebook"></use> </svg> </a>
             </li>
           </ul>
         <div class="page-footer__copyright copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/"> HTML Academy
-          <svg class="copyright__link--logo" width="27" height="34"> <use href="img/sprite.svg#icon__html-academy"></use></svg>
+          <svg class="copyright__link-logo" width="27" height="34"> <use href="img/sprite.svg#icon__html-academy"></use></svg>
           </a>
         </div>
       </div>
