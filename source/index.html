@@ -162,17 +162,27 @@
           </dl>
           <p class="example__price" >ЗАТРАТЫ НА ПИТАНИЕ: <span class="example__price-cost">15000РУБ.</span></p>
           </div>
-            <div class="example__comparison">
+          <div class="example__comparison">
             <img class="example__comparison-skinny" src="img/cat-skinny.png" srcset="img/cat-skinny@2x.png 2x" alt="худой кот" width="311" height="232">
             <div class="example__comparison-top">
               <img class="example__comparison-fat" src="img/cat-fat.png" srcset="img/cat-fat@2x.png 2x" alt="кот в теле" width="311" height="232">
             </div>
           </div>
-                <div class="comparison__controls">
+          <div class="example__controls">
+            <button class="example__controls-button" type ="button" data-value="100">было</button>
+            <div class="example__progress">
+              <div class="example__progress-line"></div>
+              <div class="example__progress-tog"></div>
+            </div>
+            <button class="example__controls-button" type ="button" data-value="100">стало</button>
+          </div>
+          <!-- работа управления с js
+            <div class="comparison__controls">
               <button class="comparison__btn comparison__btn--before" type="button" data-value="100">было</button>
               <input class="comparison__input" type="range" min="0" max="100" value="50">
               <button class="comparison__btn comparison__btn--after" type="button" data-value="0">стало</button>
             </div>
+            -->
         </div>
       </section>
       <section class="contact">
@@ -192,17 +202,17 @@
           </a>
           <ul class="page-footer__social">
             <li class="page-footer__social-item">
-              <a href="htpps://vk.com"> <svg class="page-footer__social-link" width="23" height="16"><use href="img/sprite.svg#icon_vkontakte"></use> </svg> </a>
+              <a href="htpps://vk.com" title="Вконтакте"> <svg class="page-footer__social-link page-footer__social-link--vk" width="23" height="16"><use href="img/sprite.svg#icon_vkontakte"></use> </svg> </a>
             </li>
             <li class="page-footer__social-item">
-              <a href="https://www.instagram.com/"> <svg class="page-footer__social-link page-footer__social-link--instagram" width="16" height="16"><use href="img/sprite.svg#icon_instagram"></use> </svg> </a>
+              <a href="https://www.instagram.com/" title="instagram"> <svg class="page-footer__social-link page-footer__social-link--instagram" width="16" height="16"><use href="img/sprite.svg#icon_instagram"></use> </svg> </a>
             </li>
             <li class="page-footer__social-item">
-              <a href="https://www.facebook.com/"><svg class="page-footer__social-link" width="22" height="22"><use href="img/sprite.svg#icon_facebook"></use> </svg> </a>
+              <a href="https://www.facebook.com/" title="facebook"><svg class="page-footer__social-link page-footer__social-link--facebook" width="22" height="22"><use href="img/sprite.svg#icon_facebook"></use> </svg> </a>
             </li>
           </ul>
         <div class="page-footer__copyright copyright">
-          <a class="copyright__link" href="https://htmlacademy.ru/"> HTML Academy
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"> HTML Academy
           <svg class="copyright__link-logo" width="27" height="34"> <use href="img/sprite.svg#icon__html-academy"></use></svg>
           </a>
         </div>

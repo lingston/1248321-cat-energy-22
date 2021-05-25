@@ -244,7 +244,7 @@
   max-width: 310px;
   width: 310px;
   position: relative;
-  right: 15px;
+  right: 0;
   margin: 0 auto;
   margin-top: 28px;
 
@@ -294,7 +294,7 @@
 .example__comparison-skinny,
 .example__comparison-fat {
   width: 320px;
-  height: 99%; //размеры не совпадают.
+  height: 98%; //размеры не совпадают.
 
   @media (min-width: @tablet) {
     width: 590px;
@@ -305,6 +305,118 @@
   }
 }
 
+.example__controls {
+  display: flex;
+  justify-content: space-around;
+  max-width: 228px;
+  height: 40px;
+  margin: 0 auto;
+  padding-bottom: 25px;
+
+  @media (min-width: @tablet) {
+    min-width: 582px;
+    padding-top: 24px;
+    padding-bottom: 64px;
+  }
+
+  @media (min-width: @desktop) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    position: relative;
+    top: 100px;
+    z-index: 3;
+  }
+}
+
+.example__controls-button {
+  text-transform: uppercase;
+  border: none;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: @tablet) {
+    border-bottom: 1px dotted #dccdcd;
+    padding: 7px 0;
+    font-size: 20px;
+
+    &:hover {
+      border-bottom: 1px solid #dccdcd;
+    }
+  }
+}
+
+.example__progress {
+  border: 1px solid rgba(205, 205, 205, 1);
+  min-width: 84px;
+  height: 14px;
+  border-radius: 6px;
+  margin: auto 0;
+  background: white;
+
+  @media (min-width: @tablet) {
+    border: none;
+    width: 428px;
+    height: 6px;
+    background: #dcdcdc;
+  }
+}
+
+.example__progress-line {
+  background: rgba(104, 183, 56, 1);
+  width: 35px;
+  height: 6px;
+  border-radius: 6px;
+  position: relative;
+  top: 4px;
+  left: 6px;
+
+  @media (min-width: @tablet) {
+    display: none;
+  }
+}
+
+.example__progress-tog {
+  display: none;
+
+  @media (min-width: @tablet) {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: white;
+    border-radius: 50%;
+    border: 1px solid #cdcdcd;
+    position: relative;
+    left: 46.5%;
+    bottom: 13px;
+    cursor: pointer;
+    box-shadow: 0 3px 3px 1px rgb(0 0 0 / 15%);
+  }
+}
+
+.example__progress-tog::after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #68b738;
+  position: relative;
+  top: 35%;
+  left: 37%;
+}
+
+.example__progress-tog:active {
+  border: 1px solid #68b738;
+}
+/* Управление  JS блок было-стало
 .comparison__controls {
   display: flex;
   padding: 27px 0 26px 0;
@@ -395,7 +507,9 @@
   border: 1px solid #CDCDCD;
   box-sizing: border-box;
   border-radius: 6px;
-}
+}*/
+
+
 /*.comparison__controls::after{
   width: 35px;
   height: 6px;
